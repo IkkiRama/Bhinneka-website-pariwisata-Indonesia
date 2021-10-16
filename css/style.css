@@ -668,6 +668,76 @@ footer hr {
 }
 
 /* footer end */
+.heroKelas {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #1352FF;
+}
+
+.heroKelas .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.heroKelas .container .caption {
+  width: 50%;
+  color: #fefefe;
+}
+
+.heroKelas .container .caption h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 50px;
+}
+
+.heroKelas .container .caption p {
+  font-size: 1.3rem;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+.heroKelas .container .caption a {
+  border-radius: 10px;
+  background-color: #fefefe;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: #1352FF;
+}
+
+.heroKelas .container .img {
+  width: 50%;
+}
+
+.heroKelas .container .img .heroImg {
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
+  position: relative;
+  width: 75%;
+  height: 100%;
+  z-index: 99;
+}
+
+.heroKelas .container .img .bg {
+  width: 80%;
+  position: absolute;
+  bottom: -20px;
+  right: -350px;
+}
+
 @media (min-width: 1500px) {
   header,
   section {
