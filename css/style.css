@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --primary-color: #379EE3;
+  --border-radius-20: 20px;
+  --border: 1px solid #d3dcf7;
+}
+
 *,
 *::before,
 *::after {
@@ -507,10 +513,11 @@ header .menu {
           flex-direction: column;
   text-align: center;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: var(--border-radius-20);
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   background-color: #1D247B;
+  border: var(--border);
   color: #fff;
 }
 
@@ -682,7 +689,7 @@ footer hr {
   background-color: #e4e4e7;
   margin: auto;
   margin-top: .5rem;
-  border-radius: 20px;
+  border-radius: var(--border-radius-20);
 }
 
 /* footer end */
@@ -765,7 +772,7 @@ footer hr {
 .containerFiturKelas .container {
   border-radius: 1rem;
   background-color: #fff;
-  border: 1px solid #d3dcf7;
+  border: var(--border);
 }
 
 .containerFiturKelas .container h2 {
@@ -839,6 +846,153 @@ footer hr {
   font-size: 2rem;
   font-weight: 700;
   color: #302f2f;
+}
+
+.heroDetailKelas {
+  height: 30rem;
+  background-color: #E5E5E5;
+}
+
+.heroDetailKelas .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.heroDetailKelas .container .caption {
+  width: 60%;
+  color: #302f2f;
+}
+
+.heroDetailKelas .container .caption h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.heroDetailKelas .container .caption p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 30px;
+  margin-bottom: 60px;
+}
+
+.heroDetailKelas .container .caption button,
+.heroDetailKelas .container .caption a {
+  border-radius: 10px;
+  background-color: #1352FF;
+  padding: .8rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: #fefefe;
+}
+
+.heroDetailKelas .container .img {
+  width: 40%;
+  height: 100%;
+  background-image: url("../img/kelas/Skilvul asset volume 2-03.jpg");
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 20px;
+  border-radius: var(--border-radius-20);
+}
+
+.detailKelas .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.detailKelas .container h2 {
+  font-size: 1.5rem;
+  color: #1352FF;
+  margin-bottom: 20px;
+}
+
+.detailKelas .container .tentangKelas {
+  width: 70%;
+  margin-right: 20px;
+}
+
+.detailKelas .container .tentangKelas .perTentangKelas {
+  padding: 30px 20px;
+  margin: 20px 0;
+  border-radius: var(--border-radius-20);
+  border: var(--border);
+  background-color: #fff;
+}
+
+.detailKelas .container .tentangKelas .perTentangKelas .materi p {
+  padding: 20px;
+  margin: 10px 0;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #EFF2F6;
+}
+
+.detailKelas .container .infoKelas {
+  width: 30%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 11vh;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas {
+  padding: 30px 20px;
+  margin: 20px 0;
+  border-radius: var(--border-radius-20);
+  border: var(--border);
+  background-color: #fff;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .infoMateri {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #EFF2F6;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .infoMateri img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .mentor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .mentor img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 @media (min-width: 1500px) {

@@ -1,0 +1,6 @@
+.infoKelas {
+    width: 30%;
+    position: sticky;
+    top: 200px;
+    align-self: flex-start;
+}

@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --primary-color: #379EE3;
+    --border-radius-20: 20px;
+    --border: 1px solid #d3dcf7;
+}
+
+
 
 *,
 *::before,
@@ -512,9 +519,10 @@ header {
     flex-direction: column;
     text-align: center;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: var(--border-radius-20);
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
     background-color: #1D247B;
+    border: var(--border);
     color: #fff;
 }
 
@@ -673,7 +681,7 @@ footer hr {
     background-color: #e4e4e7;
     margin: auto;
     margin-top: .5rem;
-    border-radius: 20px;
+    border-radius: var(--border-radius-20);
 
 }
 
@@ -793,7 +801,7 @@ footer hr {
         // padding: 20px 30px;
         border-radius: 1rem;
         background-color: #fff;
-        border: 1px solid #d3dcf7;
+        border: var(--border);
 
         h2 {
             padding: 20px;
@@ -854,6 +862,187 @@ footer hr {
         color: #302f2f;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Detail Kelas
+.heroDetailKelas {
+    height: 30rem;
+    background-color: #E5E5E5;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .caption {
+            width: 60%;
+            color: #302f2f;
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-size: 1.1rem;
+                font-weight: 500;
+                line-height: 30px;
+                margin-bottom: 60px;
+            }
+
+            button,
+            a {
+                border-radius: 10px;
+                background-color: #1352FF;
+                padding: .8rem 2rem;
+                font-weight: 600;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: all 200ms;
+                color: #fefefe;
+            }
+        }
+
+        .img {
+            width: 40%;
+            height: 100%;
+            background-image: url("../img/kelas/Skilvul\ asset\ volume\ 2-03.jpg");
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            margin-left: 20px;
+            border-radius: var(--border-radius-20);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+.detailKelas {
+
+    .container {
+        display: flex;
+        justify-content: center;
+
+
+        h2 {
+            font-size: 1.5rem;
+            color: #1352FF;
+            margin-bottom: 20px;
+        }
+
+
+        .tentangKelas {
+            width: 70%;
+            margin-right: 20px;
+
+            .perTentangKelas {
+                padding: 30px 20px;
+                margin: 20px 0;
+                border-radius: var(--border-radius-20);
+                border: var(--border);
+                background-color: #fff;
+
+                .materi {
+
+                    p {
+                        padding: 20px;
+                        margin: 10px 0;
+                        font-weight: 500;
+                        border-radius: 10px;
+                        background-color: #EFF2F6;
+                    }
+                }
+            }
+        }
+
+
+        .infoKelas {
+            width: 30%;
+            position: sticky;
+            top: 11vh;
+            align-self: flex-start;
+
+            .perInfoKelas {
+                padding: 30px 20px;
+                margin: 20px 0;
+                border-radius: var(--border-radius-20);
+                border: var(--border);
+                background-color: #fff;
+
+                .infoMateri {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 20px;
+                    margin: 10px 0;
+                    font-weight: 500;
+                    border-radius: 10px;
+                    background-color: #EFF2F6;
+
+                    img {
+                        height: 40px;
+                        margin-right: 10px;
+                    }
+                }
+
+                .mentor {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+                    img {
+                        height: 50px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
 
 
 
