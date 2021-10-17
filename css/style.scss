@@ -27,6 +27,15 @@ body {
     padding-bottom: 100px;
 }
 
+
+.pt-50 {
+    padding-top: 50px;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
 .container {
     width: 100%;
     height: 100%;
@@ -34,6 +43,10 @@ body {
 
 .flex-wrap {
     flex-wrap: wrap;
+}
+
+.justify-content {
+    justify-content: center;
 }
 
 
@@ -259,7 +272,7 @@ header {
             // height: 200px;
             margin: .9rem;
             padding: 20px;
-            color: #34364A;
+            // color: #34364A;
             background-color: #fff;
             border-radius: .5rem;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -273,6 +286,7 @@ header {
                 font-weight: 600;
                 margin: 30px 0 10px 0;
                 font-size: 1.4rem;
+                color: #302f2f;
             }
 
             p {
@@ -304,85 +318,102 @@ header {
         }
     }
 
-    .kelas {
-        display: flex;
-        // flex-wrap: wrap;
+}
 
-        .perKelas {
-            width: calc(100%/3);
-            margin: 15px 10px;
-            border-radius: .5rem;
-            border: 2px solid #e4e4e7;
 
-            img {
-                width: 100%;
-                height: 250px;
-                object-fit: cover;
-                border-top-left-radius: .5rem;
-                border-top-right-radius: .5rem;
-            }
 
-            h3 {
-                margin-top: 15px;
-                padding-left: 10px;
-                font-size: 1.5rem;
-            }
 
-            .info {
+
+.kelas {
+    display: flex;
+    justify-content: center;
+
+    .perKelas {
+        width: calc(90%/3);
+        margin: 15px 10px;
+        border-radius: .5rem;
+        background-color: #fff;
+        border: 2px solid #e4e4e7;
+
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-top-left-radius: .5rem;
+            border-top-right-radius: .5rem;
+        }
+
+        h3 {
+            margin-top: 15px;
+            padding-left: 10px;
+            font-size: 1.5rem;
+            color: #302f2f;
+        }
+
+        .info {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #e4e4e7;
+
+            .perInfo {
+                font-size: .9rem;
+                padding: 10px 20px;
+                color: #5438d3;
                 display: flex;
-                padding: 20px;
                 align-items: center;
                 justify-content: space-between;
-                border-bottom: 2px solid #e4e4e7;
+                background: #e0e4f3;
+                border-radius: .5rem;
+                // flex-grow: 1; ce231c
 
-                .perInfo {
-                    font-size: .9rem;
-                    padding: 10px 20px;
-                    color: #5438d3;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    background: #e0e4f3;
-                    border-radius: .5rem;
-                    // flex-grow: 1; ce231c
-
-                    p {
-                        font-weight: 500;
-                        margin-left: 5px;
-                    }
+                p {
+                    font-weight: 500;
+                    margin-left: 5px;
                 }
+
             }
 
 
             .harga {
                 font-size: 1.2rem;
-                padding: 20px;
                 color: #ce231c;
                 font-weight: 600;
                 letter-spacing: .5px;
             }
 
-            .btn {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 15px;
-
-                .selengkapnya {
-                    width: 90%;
-                    color: #fff;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    text-align: center;
-
-                    &:hover {
-                        background-color: #37488E;
-                    }
-                }
-            }
 
         }
+
+
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+
+            .selengkapnya {
+                width: 90%;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 600;
+                text-align: center;
+
+                &:hover {
+                    background-color: #37488E;
+                }
+            }
+        }
+
     }
 }
+
+
+
+
+
+
 
 .selengkapnya {
     padding: 15px 20px;
@@ -719,7 +750,7 @@ footer hr {
             a {
                 border-radius: 10px;
                 background-color: #fefefe;
-                padding: 1rem 2.5rem;
+                padding: .8rem 2rem;
                 font-weight: 600;
                 font-size: 1rem;
                 cursor: pointer;
@@ -753,8 +784,76 @@ footer hr {
 }
 
 
+.containerFiturKelas {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f8fafc;
+
+    .container {
+        // padding: 20px 30px;
+        border-radius: 1rem;
+        background-color: #fff;
+        border: 1px solid #d3dcf7;
+
+        h2 {
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ce231c;
+            border-bottom: 1px solid #ce231c;
+        }
+
+        .fitur {
+            padding: 20px;
+            display: flex;
+
+            .perFitur {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: calc(100%/4);
+
+                .img {
+                    width: 90%;
+                    height: 150px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 1rem;
+                    background-color: #EFF2F6;
+                    margin-bottom: 20px;
+
+                    img {
+                        width: 100%;
+                        height: 80%;
+                    }
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin-top: 10px;
+                    color: #302f2f;
+                    font-weight: 500;
+                    line-height: 23px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
 
 
+
+.dataKelas {
+    background-color: #F5F5F5;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #302f2f;
+    }
+}
 
 
 
