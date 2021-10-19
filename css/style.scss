@@ -25,6 +25,20 @@ body {
     background-color: #F6F8FD;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+h6 {
+    color: #302f2f;
+}
+
+
+.pt-15-vh {
+    padding-top: 15vh;
+}
 
 .pt-100 {
     padding-top: 100px;
@@ -1035,6 +1049,10 @@ footer hr {
                         border-radius: 50%;
                         margin-right: 10px;
                     }
+
+                    p {
+                        font-weight: 500;
+                    }
                 }
             }
         }
@@ -1042,6 +1060,160 @@ footer hr {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// kontak kami
+.kontak {
+    width: 100%;
+    // height: 100vh;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .caption,
+        img {
+            height: 100%;
+            width: 50%;
+        }
+
+        .caption {
+            margin-left: 50px;
+
+
+            h1 {
+                font-size: 2.1rem;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+
+form {
+
+    .form-group {
+        width: 100%;
+
+
+        label {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        textarea,
+        input {
+            width: 100%;
+            resize: none;
+            cursor: text;
+            padding: 10px;
+            margin: 10px 0;
+            color: #302f2f;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: .5rem;
+            border: 1px solid #e4e4e7;
+            background-color: #fff;
+            letter-spacing: .5px;
+        }
+    }
+
+
+    button {
+        width: 100%;
+        color: #fff;
+        padding: 12px 0;
+        // letter-spacing: .5px;
+        font-weight: 500;
+        font-size: 1.1rem;
+        border-radius: .5rem;
+        background-color: #1352FF;
+    }
+}
+
+
+
+
 
 
 

@@ -23,6 +23,20 @@ body {
   background-color: #F6F8FD;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+h6 {
+  color: #302f2f;
+}
+
+.pt-15-vh {
+  padding-top: 15vh;
+}
+
 .pt-100 {
   padding-top: 100px;
 }
@@ -993,6 +1007,80 @@ footer hr {
   height: 50px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.detailKelas .container .infoKelas .perInfoKelas .mentor p {
+  font-weight: 500;
+}
+
+.kontak {
+  width: 100%;
+}
+
+.kontak .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.kontak .container .caption,
+.kontak .container img {
+  height: 100%;
+  width: 50%;
+}
+
+.kontak .container .caption {
+  margin-left: 50px;
+}
+
+.kontak .container .caption h1 {
+  font-size: 2.1rem;
+  margin-bottom: 20px;
+}
+
+form .form-group {
+  width: 100%;
+}
+
+form .form-group label {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+form .form-group textarea {
+  height: 150px;
+}
+
+form .form-group textarea,
+form .form-group input {
+  width: 100%;
+  resize: none;
+  cursor: text;
+  padding: 10px;
+  margin: 10px 0;
+  color: #302f2f;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: .5rem;
+  border: 1px solid #e4e4e7;
+  background-color: #fff;
+  letter-spacing: .5px;
+}
+
+form button {
+  width: 100%;
+  color: #fff;
+  padding: 12px 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: .5rem;
+  background-color: #1352FF;
 }
 
 @media (min-width: 1500px) {
