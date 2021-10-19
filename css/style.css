@@ -28,8 +28,8 @@ h2,
 h3,
 h4,
 h5,
-label,
-h6 {
+h6 p,
+label {
   color: #302f2f;
 }
 
@@ -203,7 +203,6 @@ header .menu {
   -webkit-box-flex: .9;
       -ms-flex: .9;
           flex: .9;
-  color: #fefefe;
 }
 
 .heroHome .container .caption h1 {
@@ -211,6 +210,7 @@ header .menu {
   font-weight: 800;
   margin-bottom: 50px;
   line-height: 60px;
+  color: #fefefe;
 }
 
 .heroHome .container .caption h1 span {
@@ -221,6 +221,7 @@ header .menu {
   font-size: 1.3rem;
   line-height: 30px;
   margin-bottom: 60px;
+  color: #fefefe;
 }
 
 .heroHome .container .caption a {
@@ -421,6 +422,7 @@ header .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #fefefe;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -428,8 +430,8 @@ header .menu {
   border-radius: .5rem;
 }
 
-/* uploadEvent start */
-.uploadEvent {
+/* webinar start */
+.webinar {
   width: 100%;
   height: 100%;
   padding-top: 50px;
@@ -437,7 +439,7 @@ header .menu {
   background-color: #1352FF;
 }
 
-.uploadEvent .container {
+.webinar .container {
   width: 100%;
   height: 70vh;
   display: -webkit-box;
@@ -448,30 +450,31 @@ header .menu {
           align-items: center;
 }
 
-.uploadEvent .container .caption {
+.webinar .container .caption {
   width: 60%;
-  color: #fefefe;
 }
 
-.uploadEvent .container .caption h2 {
+.webinar .container .caption h2 {
   font-size: 3rem;
+  color: #fefefe;
   line-height: 60px;
   margin-bottom: 40px;
   text-transform: capitalize;
 }
 
-.uploadEvent .container .caption h2 span {
+.webinar .container .caption h2 span {
   color: #62FF07;
 }
 
-.uploadEvent .container .caption p {
+.webinar .container .caption p {
+  color: #fefefe;
   font-size: 1.4rem;
   line-height: 35px;
   text-transform: capitalize;
   margin-bottom: 70px;
 }
 
-.uploadEvent .container .caption a {
+.webinar .container .caption a {
   border-radius: 10px;
   background-color: #fff;
   padding: 1rem 2.5rem;
@@ -483,11 +486,11 @@ header .menu {
   color: #1352FF;
 }
 
-.uploadEvent .container img {
+.webinar .container img {
   width: 40%;
 }
 
-/* uploadEvent end */
+/* webinar end */
 .containerTitleHome {
   margin-top: 100px;
 }
@@ -545,6 +548,7 @@ header .menu {
   font-size: 1.3rem;
   margin-top: 20px;
   margin-bottom: 5px;
+  color: #fefefe;
 }
 
 .testimoni .container .perTestimoni span {
@@ -729,10 +733,10 @@ footer hr {
 
 .heroKelas .container .caption {
   width: 50%;
-  color: #fefefe;
 }
 
 .heroKelas .container .caption h1 {
+  color: #fefefe;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 40px;
@@ -740,6 +744,7 @@ footer hr {
 }
 
 .heroKelas .container .caption p {
+  color: #fefefe;
   font-size: 1.3rem;
   line-height: 30px;
   margin-bottom: 50px;
@@ -1011,6 +1016,187 @@ footer hr {
 
 .detailKelas .container .infoKelas .perInfoKelas .mentor p {
   font-weight: 500;
+}
+
+.bg-profil {
+  height: 50vh;
+  background-color: #1352FF;
+}
+
+.bg-profil .container {
+  background-image: url("../img/profil/profile-banner-desktop.png");
+  background-position: center;
+  background-size: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.kelasYangDimiliki .container {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #e4e4e7;
+}
+
+.kelasYangDimiliki .container h2 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.profil {
+  margin-top: -80px;
+}
+
+.profil .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.profil .container .profil-orang,
+.profil .container .profil-kelas {
+  border: var(--border);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.profil .container .profil-orang {
+  width: 35%;
+  height: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+.profil .container .profil-orang .icon {
+  top: 10px;
+  right: 10px;
+  padding: 7px 15px;
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid #e4e4e7;
+}
+
+.profil .container .profil-orang .detail-orang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-top: -80px;
+}
+
+.profil .container .profil-orang .detail-orang img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-bottom: 20px;
+}
+
+.profil .container .profil-orang .detail-orang .email {
+  font-weight: 500;
+  color: #1352FF;
+}
+
+.profil .container .profil-orang .detail-orang .sekolah {
+  color: #6f6f74;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.profil .container .profil-orang .detail-orang .pencapaian {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+
+.profil .container .profil-orang .detail-orang .pencapaian .perPencapaian {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profil .container .profil-orang .detail-orang .pencapaian .perPencapaian p {
+  font-weight: 500;
+}
+
+.profil .container .profil-orang .detail-orang .pencapaian .perPencapaian span {
+  font-weight: 600;
+  color: #ffa011;
+}
+
+.profil .container .profil-orang .detail-orang .tentangSaya {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.profil .container .profil-orang .detail-orang .tentangSaya p {
+  margin-top: 10px;
+  color: #6f6f74;
+}
+
+.profil .container .profil-orang .detail-orang a {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.profil .container .profil-kelas {
+  width: 65%;
+  min-height: 50vh;
+  margin-left: 20px;
+}
+
+.profil .container .profil-kelas .titleCodeBadge {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.profil .container .profil-kelas .codeBadgeKosong {
+  width: 100%;
+  padding: 20px 20px 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.profil .container .profil-kelas .codeBadgeKosong img {
+  width: 100px;
+  height: 100px;
+}
+
+.profil .container .profil-kelas .codeBadgeKosong h1 {
+  margin: 10px 0;
 }
 
 .kontak {
