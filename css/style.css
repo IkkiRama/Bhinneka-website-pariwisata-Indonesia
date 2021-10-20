@@ -19,6 +19,32 @@
   scroll-behavior: smooth;
 }
 
+@-webkit-keyframes fadeup {
+  from {
+    -webkit-transform: translateY(2.5rem);
+            transform: translateY(2.5rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeup {
+  from {
+    -webkit-transform: translateY(2.5rem);
+            transform: translateY(2.5rem);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 body {
   background-color: #F6F8FD;
 }
@@ -51,6 +77,10 @@ label {
 
 .pb-50 {
   padding-bottom: 50px;
+}
+
+.text-align-center {
+  text-align: center;
 }
 
 .container {
@@ -491,75 +521,61 @@ header .menu {
 }
 
 /* webinar end */
-.containerTitleHome {
-  margin-top: 100px;
-}
-
 /* testimoni start */
 .testimoni {
-  width: 100%;
-  height: 100%;
-}
-
-.testimoni .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 50px;
-}
-
-.testimoni .container .perTestimoni {
-  width: calc(90%/3);
-  height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* justify-content: center; */
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  padding: 20px;
-  border-radius: var(--border-radius-20);
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  background-color: #1D247B;
-  border: var(--border);
-  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.testimoni .container .perTestimoni img {
+.testimoni .container .caption.active {
+  -webkit-animation: fadeup .6s ease-in-out forwards;
+          animation: fadeup .6s ease-in-out forwards;
+}
+
+.testimoni .container .caption h2 {
+  font-size: 2rem;
+}
+
+.testimoni .container .caption h3 {
+  color: #6f6f74;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.testimoni .container .caption p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.testimoni .container .caption img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
 
-.testimoni .container .perTestimoni h2 {
-  font-size: 1.3rem;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  color: #fefefe;
+.testimoni .container .img img {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 50%;
+  border: 2px solid #fefefe;
 }
 
-.testimoni .container .perTestimoni span {
-  font-size: .9rem;
-  margin-top: 3px;
-}
-
-.testimoni .container .perTestimoni p {
-  margin-top: 1rem !important;
-  font-weight: 500;
-  line-height: 20px;
+.testimoni .container .img img:hover, .testimoni .container .img img.active {
+  border: 2px solid #555fb9;
 }
 
 /* testimoni end */
@@ -1199,6 +1215,36 @@ footer hr {
   margin: 10px 0;
 }
 
+.tentangKami {
+  height: 100vh;
+}
+
+.tentangKami .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tentangKami .container .caption {
+  margin-left: 20px;
+}
+
+.tentangKami .container .caption h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.tentangKami .container .caption p {
+  line-height: 25px;
+  font-size: 1.1rem;
+}
+
 .kontak {
   width: 100%;
 }
@@ -1248,10 +1294,10 @@ form .form-group input {
   width: 100%;
   resize: none;
   cursor: text;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 10px 0;
   color: #302f2f;
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 500;
   border-radius: .5rem;
   border: 1px solid #e4e4e7;

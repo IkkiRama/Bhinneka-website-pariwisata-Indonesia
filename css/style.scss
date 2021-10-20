@@ -21,6 +21,18 @@
     scroll-behavior: smooth;
 }
 
+@keyframes fadeup {
+    from {
+        transform: translateY(2.5rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 body {
     background-color: #F6F8FD;
 }
@@ -55,6 +67,10 @@ label {
 
 .pb-50 {
     padding-bottom: 50px;
+}
+
+.text-align-center {
+    text-align: center;
 }
 
 .container {
@@ -510,62 +526,145 @@ header {
 /* webinar end */
 
 
-.containerTitleHome {
-    margin-top: 100px;
-}
 
 /* testimoni start */
+
+
+
 .testimoni {
-    width: 100%;
-    height: 100%;
-}
-
-.testimoni .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-}
-
-.testimoni .container .perTestimoni {
-    width: calc(90%/3);
-    height: 600px;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    border-radius: var(--border-radius-20);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
-    background-color: #1D247B;
-    border: var(--border);
-    color: #fff;
+    justify-content: center;
+
+    .container {
+        // overflow: hidden;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+
+        .caption {
+
+            &.active {
+                animation: fadeup .6s ease-in-out forwards;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                color: #6f6f74;
+                font-weight: 500;
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+
+            p {
+                // font-weight: 450;
+                // font-size: 1.1rem;
+                // line-height: 30px;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+        }
+
+        .img {
+
+
+            img {
+                width: 100px;
+                height: 100px;
+                padding: 5px;
+                margin: 0 5px;
+                cursor: pointer;
+                transition: .3s;
+                border-radius: 50%;
+                border: 2px solid #fefefe;
+
+                &:hover,
+                &.active {
+                    border: 2px solid #555fb9;
+                }
+            }
+        }
+    }
+
 }
 
-.testimoni .container .perTestimoni img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
 
-.testimoni .container .perTestimoni h2 {
-    font-size: 1.3rem;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    color: #fefefe;
-}
 
-.testimoni .container .perTestimoni span {
-    font-size: .9rem;
-    margin-top: 3px;
-}
 
-.testimoni .container .perTestimoni p {
-    margin-top: 1rem !important;
-    font-weight: 500;
-    line-height: 20px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .testimoni {
+//     width: 100%;
+//     height: 100%;
+// }
+
+// .testimoni .container {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-top: 50px;
+// }
+
+// .testimoni .container .perTestimoni {
+//     width: calc(90%/3);
+//     height: 600px;
+//     display: flex;
+//     align-items: center;
+//     /* justify-content: center; */
+//     flex-direction: column;
+//     text-align: center;
+//     padding: 20px;
+//     border-radius: var(--border-radius-20);
+//     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+//     background-color: #1D247B;
+//     border: var(--border);
+//     color: #fff;
+// }
+
+// .testimoni .container .perTestimoni img {
+//     width: 150px;
+//     height: 150px;
+//     border-radius: 50%;
+// }
+
+// .testimoni .container .perTestimoni h2 {
+//     font-size: 1.3rem;
+//     margin-top: 20px;
+//     margin-bottom: 5px;
+//     color: #fefefe;
+// }
+
+// .testimoni .container .perTestimoni span {
+//     font-size: .9rem;
+//     margin-top: 3px;
+// }
+
+// .testimoni .container .perTestimoni p {
+//     margin-top: 1rem !important;
+//     font-weight: 500;
+//     line-height: 20px;
+// }
 
 /* testimoni end */
 
@@ -1312,6 +1411,57 @@ footer hr {
 
 
 
+// tentangKami
+.tentangKami {
+    height: 100vh;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .caption {
+            margin-left: 20px;
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            p {
+                line-height: 25px;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1444,10 +1594,10 @@ form {
             width: 100%;
             resize: none;
             cursor: text;
-            padding: 10px;
+            padding: 10px 20px;
             margin: 10px 0;
             color: #302f2f;
-            font-size: 1rem;
+            font-size: .9rem;
             font-weight: 500;
             border-radius: .5rem;
             border: 1px solid #e4e4e7;

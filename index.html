@@ -303,14 +303,53 @@
 
 
 
-    <section class="containerTitleHome">
+
+
+    <!-- <section class="pt-50 text-align-center">
         <div class="container">
             <div class="title">
-                <h2>Kata Mereka Tentang TasBee</h2>
+                <h2>Kata Mereka Tentang CodePee</h2>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="penjelasan pt-100">
+        <div class="container">
+            <div class="title">
+                <p class>Success Stories</p>
+                <h2>Membangun Hasil Karya<br>Yang Bermanfaat</h2>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="testimoni text-align-center pt-50">
+        <div class="container">
+            <div class="caption pb-50">
+                <img src="img/people/img1.jpg" alt="img orang">
+                <h2>Rifki Romadhan</h2>
+                <h3>Web Developer</h3>
+                <p>
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam minima accusantium vitae cupiditate
+                    aut molestias nesciunt commodi asperiores sapiente, dicta veniam, ad minus. Non assumenda rerum
+                    reiciendis sequi quo! Minima et nobis assumenda reiciendis laborum, mollitia earum aspernatur
+                    accusantium consequatur necessitatibus saepe ad eum excepturi quisquam pariatur quo! Quas, nam
+                    laudantium saepe ut harum deserunt dignissimos odit placeat magnam reiciendis!"
+                </p>
+            </div>
+
+            <div class="img">
+                <img src="img/people/img1.jpg" alt="img orang" class="active">
+                <img src="img/people/img2.jpg" alt="img orang">
+                <img src="img/people/img3.jpg" alt="img orang">
+                <img src="img/people/orang1.svg" alt="img orang">
+                <img src="img/people/orang2.svg" alt="img orang">
             </div>
         </div>
     </section>
 
+    <!-- 
     <section class="testimoni" id="testimoni">
 
         <div class="container">
@@ -362,7 +401,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -451,28 +490,6 @@
 
 
 
-    <!-- Kelas Intro to Coding dibuat untuk kamu yang ingin mempelajari dasar pemrograman dan sebagai salah satu kelas untuk
-persiapan mengikuti coding bootcamp.
-
-
-UI/UX Design Mastery
-UI/UX Design Mastery
-Apakah kamu ingin berpindah karir menjadi UI/UX Designer dan memulai dari awal hingga mahir? Apakah kamu ingin menjadi
-UI/UX Designer yang -->
-    <!-- 
-        EFF2F6
-    Pilih kelas yang sesuai keinginanmu
-
-    Selesaikan materi kelas yang dipilih dan kerjakan latihannya
-
-    Jika sudah mahir kamu bisa langsung mengikuti tantangan
-
-    Raih SkilPoin atau SkilBadge ketika kamu sudah menyelesaikan kelas
- -->
-
-
-
-
     <script type="text/javascript">
         let navbar = document.querySelector("header")
 
@@ -480,6 +497,26 @@ UI/UX Designer yang -->
             let navbarPos = window.scrollY > 100
             navbar.classList.toggle('bg-white', navbarPos)
         })
+
+        let captionImg = document.querySelector(".testimoni .container .caption img")
+        let imgTestimoni = document.querySelectorAll(".testimoni .container .img img")
+
+        imgTestimoni.forEach(img => {
+
+            img.addEventListener("click", e => {
+
+                imgTestimoni.forEach(imgNow => {
+                    imgNow.className = "a"
+                })
+
+                e.target.classList.add('active')
+                captionImg.src = e.target.src
+                captionImg.parentElement.classList.toggle("active")
+            })
+
+        })
+
+        console.log(captionImg.parentElement)
     </script>
 
 </body>
