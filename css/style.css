@@ -46,6 +46,7 @@
 }
 
 body {
+  overflow-x: hidden;
   background-color: #F6F8FD;
 }
 
@@ -54,7 +55,10 @@ h2,
 h3,
 h4,
 h5,
-h6 p,
+h6,
+a,
+p,
+span,
 label {
   color: #302f2f;
 }
@@ -115,16 +119,20 @@ header.bg-white {
   background: #fefefe;
 }
 
-header.bg-white .logo h1 {
+header.bg-white .container .logo h1 {
   color: #1352FF;
 }
 
-header.bg-white .logo h1 span {
+header.bg-white .container .logo h1 span {
   color: #ffa011;
 }
 
-header.bg-white nav ul li a {
+header.bg-white .container nav ul li a {
   color: #34364A;
+}
+
+header.bg-white .container .menu span {
+  background-color: #302f2f;
 }
 
 header {
@@ -151,36 +159,36 @@ header .container {
   transition: .3s;
 }
 
-header .logo {
+header .container .logo {
   font-size: .9rem;
 }
 
-header .logo h1 {
+header .container .logo h1 {
   color: #fefefe;
   font-weight: 800;
 }
 
-header .logo h1 span {
+header .container .logo h1 span {
   color: #62ff07;
 }
 
-header nav ul li {
+header .container nav ul li {
   position: relative;
   display: inline-block;
   margin: 0 15px;
 }
 
-header nav ul li a {
+header .container nav ul li a {
   color: #fefefe;
   font-size: 1rem;
   font-weight: 550;
 }
 
-header nav ul li a:hover {
+header .container nav ul li a:hover {
   opacity: .85;
 }
 
-header .auth a {
+.auth a {
   color: #fefefe;
   margin: 0 5px;
   font-size: .9rem;
@@ -189,17 +197,145 @@ header .auth a {
   padding: 10px 20px;
 }
 
-header .auth .masuk {
+.auth a:first-child {
   background-color: #5438d3;
 }
 
-header .auth .daftar {
+.auth a:last-child {
   color: #5438d3;
   background-color: #d3dcf7;
 }
 
-header .menu {
+.auth a:hover {
+  opacity: .9;
+}
+
+.menu {
+  width: 40px;
+  height: 22px;
+  max-height: 100%;
+  position: fixed;
   display: none;
+  left: 50px;
+  cursor: pointer;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 99999999999999999999999999999;
+}
+
+.menu:hover span {
+  opacity: .9;
+}
+
+.menu span {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.menu span:nth-child(2) {
+  width: 80%;
+}
+
+.menu span:last-child {
+  width: 50%;
+}
+
+.navMobile.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.navMobile {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  background-color: rgba(22, 22, 22, 0.445);
+  z-index: 9999999999;
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.navMobile ul {
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  position: relative;
+  background-color: #fff;
+}
+
+.navMobile ul .control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.navMobile ul .control .menu {
+  position: relative;
+  left: 0;
+}
+
+.navMobile ul .control .menu span {
+  background-color: #302f2f;
+}
+
+.navMobile ul .control h1 {
+  color: #1352FF;
+  font-weight: 800;
+}
+
+.navMobile ul .control h1 span {
+  color: #ffa011;
+}
+
+.navMobile ul .auth {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.navMobile ul .auth a {
+  width: 50%;
+}
+
+.navMobile ul li {
+  padding: 10px 0;
+}
+
+.navMobile ul li a {
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+
+.navMobile ul li a:hover {
+  opacity: .9;
 }
 
 .heroHome {
@@ -222,23 +358,23 @@ header .menu {
           justify-content: space-between;
 }
 
-.heroHome .container .thumbnail {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.heroHome .container .hero-img {
+  width: 45%;
+}
+
+.heroHome .container .hero-img .thumbnail {
+  width: 100%;
   height: 100%;
 }
 
 .heroHome .container .caption {
-  -webkit-box-flex: .9;
-      -ms-flex: .9;
-          flex: .9;
+  width: 55%;
 }
 
 .heroHome .container .caption h1 {
   font-size: 3.1rem;
   font-weight: 800;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   line-height: 60px;
   color: #fefefe;
 }
@@ -557,14 +693,14 @@ header .menu {
 }
 
 .testimoni .container .caption img {
-  width: 150px;
-  height: 150px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
 }
 
 .testimoni .container .img img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   padding: 5px;
   margin: 0 5px;
   cursor: pointer;
@@ -1337,10 +1473,60 @@ form button {
     max-width: 1140px;
   }
   .join .container {
-    height: 60vh;
+    height: 50vh;
   }
   .join .container img {
     height: 80%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .heroHome .container .caption h1 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    line-height: 50px;
+  }
+  .heroHome .container .caption h1 span {
+    color: #ffa011;
+  }
+  .heroHome .container .caption p {
+    font-size: 1.1rem;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+  .penjelasan .fitur {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1000px) {
+  header,
+  section,
+  footer {
+    padding: 0 50px;
+  }
+  header .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .container nav {
+    display: none;
+  }
+  header .container .auth {
+    display: none;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .heroHome .container .caption a {
+    padding: .9rem 1.8rem;
+  }
+  .penjelasan .fitur .perFitur {
+    width: calc(90%/2);
   }
 }
 /*# sourceMappingURL=style.css.map */

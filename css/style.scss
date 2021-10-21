@@ -34,6 +34,7 @@
 }
 
 body {
+    overflow-x: hidden;
     background-color: #F6F8FD;
 }
 
@@ -42,7 +43,10 @@ h2,
 h3,
 h4,
 h5,
-h6 p,
+h6,
+a,
+p,
+span,
 label {
     color: #302f2f;
 }
@@ -100,31 +104,43 @@ header.bg-white {
     transition: .3s;
     background: #fefefe;
 
-    .logo {
+    .container {
 
-        h1 {
-            color: #1352FF;
+        .logo {
 
-            span {
-                color: rgb(255, 160, 17);
+            h1 {
+                color: #1352FF;
+
+                span {
+                    color: rgb(255, 160, 17);
+                }
             }
+
         }
 
-    }
+        nav {
 
-    nav {
-
-        ul {
+            ul {
 
 
-            li {
+                li {
 
 
-                a {
-                    color: #34364A;
+                    a {
+                        color: #34364A;
+                    }
                 }
             }
         }
+
+        .menu {
+
+            span {
+
+                background-color: #302f2f;
+            }
+        }
+
     }
 
 
@@ -145,73 +161,192 @@ header {
         background: transparent;
         // background: #1352FF;
         transition: .3s;
-    }
 
-    .logo {
-        font-size: .9rem;
+        .logo {
+            font-size: .9rem;
 
-        h1 {
-            color: #fefefe;
-            font-weight: 800;
+            h1 {
+                color: #fefefe;
+                font-weight: 800;
 
-            span {
-                color: rgb(98, 255, 7);
+                span {
+                    color: rgb(98, 255, 7);
+                }
+            }
+
+        }
+
+        nav {
+
+            ul {
+
+
+                li {
+                    position: relative;
+                    display: inline-block;
+                    margin: 0 15px;
+
+                    a {
+                        color: #fefefe;
+                        font-size: 1rem;
+                        font-weight: 550;
+
+                        &:hover {
+                            opacity: .85;
+                        }
+                    }
+                }
             }
         }
 
+
+    }
+}
+
+
+
+.auth {
+
+    a {
+        color: #fefefe;
+        margin: 0 5px;
+        font-size: .9rem;
+        font-weight: 550;
+        border-radius: 7px;
+        padding: 10px 20px;
+
+        &:first-child {
+            background-color: #5438d3;
+        }
+
+        &:last-child {
+            color: #5438d3;
+            background-color: #d3dcf7;
+        }
+
+        &:hover {
+            opacity: .9;
+        }
     }
 
-    nav {
-
-        ul {
+}
 
 
-            li {
+
+
+
+.menu {
+    width: 40px;
+    height: 22px;
+    max-height: 100%;
+    position: fixed;
+    display: none;
+    left: 50px;
+    cursor: pointer;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 99999999999999999999999999999;
+
+    &:hover {
+
+        span {
+            opacity: .9;
+        }
+    }
+
+    span {
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        border-radius: 10px;
+
+        &:nth-child(2) {
+            width: 80%;
+        }
+
+        &:last-child {
+            width: 50%;
+        }
+    }
+}
+
+.navMobile.show {
+    transform: translateX(0);
+    transition: .5s;
+}
+
+.navMobile {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    background-color: rgba(22, 22, 22, 0.445);
+    z-index: 9999999999;
+    transform: translateX(-150%);
+    display: flex;
+    transition: .5s;
+
+    ul {
+        width: 60%;
+        height: 100%;
+        padding: 20px;
+        position: relative;
+        background-color: #fff;
+
+        .control {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            // font-size: 1rem;
+
+            .menu {
                 position: relative;
-                display: inline-block;
-                margin: 0 15px;
+                left: 0;
 
-                a {
-                    color: #fefefe;
-                    font-size: 1rem;
-                    font-weight: 550;
+                span {
+                    background-color: #302f2f;
+                }
+            }
 
-                    &:hover {
-                        opacity: .85;
-                    }
+
+            h1 {
+                color: #1352FF;
+                font-weight: 800;
+
+                span {
+                    color: rgb(255, 160, 17);
+                }
+            }
+        }
+
+        .auth {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            margin-top: 20px;
+
+            a {
+                width: 50%;
+            }
+        }
+
+        li {
+            padding: 10px 0;
+
+            a {
+                font-size: 1.1rem;
+                font-weight: 550;
+
+                &:hover {
+                    opacity: .9;
                 }
             }
         }
     }
 
-    .auth {
-
-        a {
-            color: #fefefe;
-            margin: 0 5px;
-            font-size: .9rem;
-            font-weight: 550;
-            border-radius: 7px;
-            padding: 10px 20px;
-        }
-
-        .masuk {
-            background-color: #5438d3;
-            // border: 1px solid #5438d3;
-        }
-
-        .daftar {
-            color: #5438d3;
-            background-color: #d3dcf7;
-            // border: 2px solid #5438d3;
-        }
-    }
-
-    .menu {
-        display: none;
-    }
 }
-
 
 
 
@@ -228,19 +363,25 @@ header {
         align-items: center;
         justify-content: space-between;
 
-        .thumbnail {
-            // width: 50%;
-            flex: 1;
-            height: 100%;
+        .hero-img {
+            width: 45%;
+            // flex: .1;
+            // height: 100%;
+
+            .thumbnail {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         .caption {
-            flex: .9;
+            width: 55%;
+            // flex: 1;
 
             h1 {
                 font-size: 3.1rem;
                 font-weight: 800;
-                margin-bottom: 50px;
+                margin-bottom: 30px;
                 line-height: 60px;
                 color: #fefefe;
 
@@ -569,8 +710,8 @@ header {
             }
 
             img {
-                width: 150px;
-                height: 150px;
+                width: 125px;
+                height: 125px;
                 border-radius: 50%;
             }
         }
@@ -579,8 +720,8 @@ header {
 
 
             img {
-                width: 100px;
-                height: 100px;
+                width: 90px;
+                height: 90px;
                 padding: 5px;
                 margin: 0 5px;
                 cursor: pointer;
@@ -1703,7 +1844,7 @@ form {
     .join {
 
         .container {
-            height: 60vh;
+            height: 50vh;
 
             img {
                 // width: 500px;
@@ -1712,5 +1853,106 @@ form {
         }
     }
 
+
+}
+
+
+
+@media(max-width:1200px) {
+    .heroHome {
+
+        .container {
+
+            // .hero-img {}
+
+            .caption {
+
+                h1 {
+                    font-size: 2.8rem;
+                    margin-bottom: 30px;
+                    line-height: 50px;
+
+                    span {
+                        color: rgb(255, 160, 17);
+                    }
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    line-height: 25px;
+                    margin-bottom: 40px;
+                }
+            }
+
+        }
+
+    }
+
+
+
+    .penjelasan {
+
+        .fitur {
+            flex-wrap: wrap;
+        }
+    }
+
+}
+
+
+
+@media(max-width:1000px) {
+
+    header,
+    section,
+    footer {
+        padding: 0 50px;
+    }
+
+    header {
+        .container {
+
+            justify-content: center;
+
+            nav {
+                display: none;
+            }
+
+            .auth {
+                display: none;
+            }
+
+
+        }
+    }
+
+
+    .menu {
+        display: flex;
+    }
+
+    .heroHome {
+        .container {
+
+            .caption {
+
+                a {
+                    padding: .9rem 1.8rem;
+                }
+            }
+        }
+    }
+
+
+
+    .penjelasan {
+
+        .fitur {
+
+            .perFitur {
+                width: calc(90%/2);
+            }
+        }
+    }
 
 }

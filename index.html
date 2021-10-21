@@ -21,6 +21,12 @@
     <header>
         <div class="container">
 
+            <div class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <a href="index.html" class="logo">
                 <h1>Code<span>Pee</span></h1>
             </a>
@@ -36,36 +42,41 @@
 
 
             <div class="auth">
-                <a href="masuk.html" class="masuk">Masuk</a>
-                <a href="daftar.html" class="daftar">Daftar</a>
+                <a href="masuk.html">Masuk</a>
+                <a href="daftar.html">Daftar</a>
             </div>
 
-
-            <div class="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </header>
 
-    <!-- 
-    <ul class="navMobile">
-        <a href="">
-            <h1>CodePee</h1>
-        </a>
 
-        <li><a href="">Home</a></li>
-        <li><a href="">Katalog Kelas</a></li>
-        <li><a href="">Learning Path</a></li>
-        <li><a href="">Tentang Kami</a></li>
-        <li><a href="">Kontak</a></li>
 
-        <div class="auth">
-            <a href="">Masuk</a>
-            <a href="">Daftar</a>
-        </div>
-    </ul> -->
+
+    <nav class="navMobile">
+        <ul>
+            <div class="control">
+
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <h1>Code<span>Pee</span></h1>
+            </div>
+
+            <li><a href="">Home</a></li>
+            <li><a href="">Katalog Kelas</a></li>
+            <li><a href="">Learning Path</a></li>
+            <li><a href="">Tentang Kami</a></li>
+            <li><a href="">Kontak</a></li>
+
+            <div class="auth">
+                <a href="">Masuk</a>
+                <a href="">Daftar</a>
+            </div>
+        </ul>
+    </nav>
 
 
     <section class="heroHome" style="padding-top: 100px;">
@@ -313,7 +324,7 @@
         </div>
     </section> -->
 
-    <section class="penjelasan pt-100">
+    <section class="penjelasan pt-100 ">
         <div class="container">
             <div class="title">
                 <p class>Success Stories</p>
@@ -324,7 +335,7 @@
     </section>
 
 
-    <section class="testimoni text-align-center pt-50">
+    <section class="testimoni text-align-center pt-50 pb-50">
         <div class="container">
             <div class="caption pb-50">
                 <img src="img/people/img1.jpg" alt="img orang">
@@ -492,16 +503,41 @@
 
     <script type="text/javascript">
         let navbar = document.querySelector("header")
+        let navMobile = document.querySelector(".navMobile")
+        let menu = document.querySelectorAll(".menu")
 
+        //change warna saat scroll
         window.addEventListener("scroll", () => {
             let navbarPos = window.scrollY > 100
             navbar.classList.toggle('bg-white', navbarPos)
         })
 
+
+        //hamburger togle
+        menu.forEach(m => {
+            m.addEventListener("click", () => {
+                navMobile.classList.toggle("show")
+            })
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         let captionImg = document.querySelector(".testimoni .container .caption img")
         let imgTestimoni = document.querySelectorAll(".testimoni .container .img img")
 
         imgTestimoni.forEach(img => {
+
 
             img.addEventListener("click", e => {
 
@@ -511,12 +547,14 @@
 
                 e.target.classList.add('active')
                 captionImg.src = e.target.src
-                captionImg.parentElement.classList.toggle("active")
+                captionImg.parentElement.classList.add("active")
+
+                setTimeout(function () {
+                    captionImg.parentElement.classList.remove("active")
+                }, 600)
             })
 
         })
-
-        console.log(captionImg.parentElement)
     </script>
 
 </body>
