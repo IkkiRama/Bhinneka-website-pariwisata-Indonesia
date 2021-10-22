@@ -259,7 +259,7 @@ header {
         width: 100%;
         height: 4px;
         background-color: #fff;
-        border-radius: 10px;
+        border-radius: 20px;
 
         &:nth-child(2) {
             width: 80%;
@@ -447,7 +447,7 @@ header {
         text-align: left;
 
         .perFitur {
-            width: 25%;
+            width: calc(90%/3);
             // height: 200px;
             margin: .9rem;
             padding: 20px;
@@ -514,6 +514,14 @@ header {
         background-color: #fff;
         border: 2px solid #e4e4e7;
 
+        .deskripsiSingkat {
+            margin-top: 20px;
+            padding: 0 10px;
+            font-size: 1rem;
+            color: #34364A;
+            font-weight: 500;
+        }
+
         img {
             width: 100%;
             height: 250px;
@@ -550,6 +558,7 @@ header {
                 p {
                     font-weight: 500;
                     margin-left: 5px;
+                    color: #5438d3;
                 }
 
             }
@@ -670,74 +679,169 @@ header {
 
 /* testimoni start */
 
+.penjelasan {
 
+    .testimoni {
 
-.testimoni {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .container {
-        // overflow: hidden;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-
-        .caption {
-
-            &.active {
-                animation: fadeup .6s ease-in-out forwards;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
+        .perFitur {
+            min-height: 350px;
+            max-height: 100%;
 
             h3 {
+                font-weight: 650;
+                margin-top: 10px;
+                margin-bottom: 0px;
+            }
+
+            h4 {
                 color: #6f6f74;
-                font-weight: 500;
-                font-size: 1.2rem;
-                margin-bottom: 20px;
-            }
-
-            p {
-                // font-weight: 450;
-                // font-size: 1.1rem;
-                // line-height: 30px;
-                font-weight: 400;
-                font-size: 1rem;
-                line-height: 1.8;
+                font-weight: 550;
+                margin-bottom: 15px;
             }
 
             img {
-                width: 125px;
-                height: 125px;
+                width: 70px;
+                height: 70px;
                 border-radius: 50%;
-            }
-        }
-
-        .img {
-
-
-            img {
-                width: 90px;
-                height: 90px;
-                padding: 5px;
-                margin: 0 5px;
-                cursor: pointer;
-                transition: .3s;
-                border-radius: 50%;
-                border: 2px solid #fefefe;
-
-                &:hover,
-                &.active {
-                    border: 2px solid #555fb9;
-                }
             }
         }
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .testimoni {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     .container {
+//         // overflow: hidden;
+//         //     display: flex;
+//         //     align-items: center;
+//         //     justify-content: center;
+
+//         .caption {
+
+//             &.active {
+//                 animation: fadeup .6s ease-in-out forwards;
+//             }
+
+//             h2 {
+//                 font-size: 2rem;
+//             }
+
+//             h3 {
+//                 color: #6f6f74;
+//                 font-weight: 500;
+//                 font-size: 1.2rem;
+//                 margin-bottom: 20px;
+//             }
+
+//             p {
+//                 // font-weight: 450;
+//                 // font-size: 1.1rem;
+//                 // line-height: 30px;
+//                 font-weight: 400;
+//                 font-size: 1rem;
+//                 line-height: 1.8;
+//             }
+
+//             img {
+//                 width: 125px;
+//                 height: 125px;
+//                 border-radius: 50%;
+//             }
+//         }
+
+//         .img {
+
+
+//             img {
+//                 width: 90px;
+//                 height: 90px;
+//                 padding: 5px;
+//                 margin: 0 5px;
+//                 cursor: pointer;
+//                 transition: .3s;
+//                 border-radius: 50%;
+//                 border: 2px solid #fefefe;
+
+//                 &:hover,
+//                 &.active {
+//                     border: 2px solid #555fb9;
+//                 }
+//             }
+//         }
+//     }
+
+// }
 
 
 
@@ -819,29 +923,31 @@ header {
     background-attachment: fixed;
     background-size: cover;
     object-fit: cover;
-    margin-top: 70px;
+    // margin-top: 70px;
+
+    .container {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 50%;
+            height: 80%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 60px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-left: 20px;
+            color: #302f2f;
+        }
+
+    }
 }
 
-.join .container {
-    width: 100%;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-}
-
-.join .container img {
-    width: 50%;
-    height: 80%;
-}
-
-.join .container h1 {
-    font-size: 2.5rem;
-    line-height: 60px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-left: 20px;
-    color: #302f2f;
-}
 
 /* join end */
 
@@ -1897,6 +2003,46 @@ form {
         }
     }
 
+    .penjelasan {
+
+        .fitur {
+
+            .perFitur {
+                width: calc(90%/2);
+            }
+        }
+    }
+
+
+
+    .kelas {
+        flex-wrap: wrap;
+
+        .perKelas {
+            width: calc(90%/2);
+
+            .deskripsiSingkat {
+                font-size: .9rem;
+            }
+
+        }
+    }
+
+    .join {
+
+        .container {
+
+            img {}
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+        }
+    }
+
+
+
 }
 
 
@@ -1906,7 +2052,8 @@ form {
     header,
     section,
     footer {
-        padding: 0 50px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     header {
@@ -1934,6 +2081,14 @@ form {
     .heroHome {
         .container {
 
+            .hero-img {
+                height: 100%;
+
+                .thumbnail {
+                    height: 100%;
+                }
+            }
+
             .caption {
 
                 a {
@@ -1944,14 +2099,785 @@ form {
     }
 
 
+    .kelasHome {
+
+        .title {
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            a {
+                padding: 10px 15px;
+            }
+        }
+
+    }
+
+
+    .webinar {
+
+        .container {
+
+            .caption {
+
+                h2 {
+                    font-size: 2.5rem;
+                    line-height: 50px;
+                    margin-bottom: 30px;
+
+
+                    span {}
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    line-height: 30px;
+                    margin-bottom: 50px;
+                }
+
+                a {
+                    padding: .9rem 2rem;
+                }
+            }
+
+
+            img {
+                // width: 40%;
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:900px) {
+    .join {
+
+        .container {
+
+            h1 {
+                font-size: 1.8rem;
+                line-height: 40px;
+                letter-spacing: 1px;
+            }
+
+        }
+    }
+}
+
+@media(max-width:800px) {
+
+    header,
+    section,
+    footer {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .menu {
+        left: 25px;
+    }
+
+    // .heroHome {
+    //     .container {
+
+    //         .hero-img {
+    //             // width: 50%;
+    //             height: 100%;
+
+    //             .thumbnail {
+    //                 height: 100%;
+    //             }
+    //         }
+
+    //         .caption {
+    //             // width: 50%;
+
+    //             h1 {
+    //                 font-size: 2.4rem;
+    //                 margin-bottom: 40px;
+    //             }
+
+    //             p {
+    //                 font-size: 1.1rem;
+    //                 margin-bottom: 60px;
+    //             }
+
+    //             a {
+    //                 padding: .9rem 1.5rem;
+    //             }
+    //         }
+    //     }
+    // }
+
+
+
+    .heroHome {
+        padding-top: 0;
+
+        .container {
+            flex-wrap: wrap-reverse;
+            text-align: center;
+
+            .hero-img {
+                display: none;
+            }
+
+            .caption {
+                width: 100%;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    line-height: 30px;
+                    margin-bottom: 60px;
+                }
+
+                a {
+                    padding: .9rem 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media(max-width:750px) {
+    .kelasHome {
+
+        .title {
+            text-align: center;
+            justify-content: center;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            a {
+                display: none;
+            }
+        }
+
+    }
+
+
+
+    .kelas {
+
+        .perKelas {
+            width: calc(95%/2);
+            margin: 10px 5px;
+
+            .deskripsiSingkat {
+                font-size: .9rem;
+            }
+
+            img {}
+
+            h3 {}
+
+            .info {
+
+                .perInfo {
+
+                    p {}
+
+                }
+
+
+                .harga {}
+
+
+            }
+
+
+        }
+    }
+
+
+
+    .webinar {
+
+        .container {
+
+            .caption {
+
+                h2 {
+                    font-size: 2.3rem;
+                    line-height: 45px;
+                    // margin-bottom: 30px;
+
+
+                    span {}
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    line-height: 25px;
+                    // margin-bottom: 50px;
+                }
+
+                a {
+                    padding: .7rem 1.4rem;
+                }
+            }
+
+
+            img {
+                // width: 40%;
+            }
+        }
+    }
+
+
+
+}
+
+
+
+@media(max-width:700px) {
+
 
     .penjelasan {
 
-        .fitur {
+        .container {
+            .fitur {
 
-            .perFitur {
-                width: calc(90%/2);
+                .perFitur {
+                    width: 80%;
+                }
             }
+
+            .testimoni {
+
+                .perFitur {
+                    min-height: 300px;
+                }
+
+            }
+        }
+    }
+
+
+    .kelasHome {
+
+        .title {
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+
+
+    .kelas {
+
+        .perKelas {
+            width: 80%;
+            margin: 10px 5px;
+        }
+    }
+
+
+
+
+    .title {
+        p {
+            font-size: 1.2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            line-height: 45px;
+        }
+    }
+
+
+    .webinar {
+
+        .container {
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+            text-align: center;
+
+            .caption {
+                width: 100%;
+            }
+
+
+            img {
+                width: 60%;
+                height: 300px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+
+    .join {
+
+        .container {
+            height: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            img {
+                margin-bottom: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+                line-height: 45px;
+                margin-left: 0;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+@media(max-width:600px) {
+
+    .navMobile {
+
+        ul {
+            width: 70%;
+        }
+    }
+
+    .penjelasan {
+
+        .container {
+            .fitur {
+
+                .perFitur {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+
+    .kelasHome {
+
+        .title {
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+    }
+
+
+
+    .kelas {
+
+        .perKelas {
+            width: 90%;
+        }
+    }
+
+
+
+
+    .title {
+        p {
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            line-height: 35px;
+        }
+    }
+
+    .webinar {
+
+        .container {
+
+            .caption {
+                width: 100%;
+
+                h2 {
+                    font-size: 2rem;
+                    line-height: 40px;
+                }
+            }
+
+
+            img {
+                width: 80%;
+                height: 300px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+
+
+
+}
+
+
+
+
+
+@media(max-width:500px) {
+
+
+    header,
+    section,
+    footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .menu {
+        left: 15px;
+    }
+
+    .heroHome {
+
+        .container {
+
+            .caption {
+
+                h1 {
+                    font-size: 2rem;
+                    line-height: 40px;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+
+
+    .penjelasan {
+
+        .container {
+
+            .fitur {
+
+                .perFitur {
+                    width: 100%;
+                    margin: 12px 0;
+                }
+            }
+
+            .testimoni {
+
+                .perFitur {
+                    min-height: 350px;
+                }
+
+            }
+        }
+    }
+
+
+    .kelasHome {
+
+        .title {
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+    }
+
+
+
+    .kelas {
+
+        .perKelas {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+
+
+
+
+    .title {
+        p {
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    .webinar {
+
+        .container {
+
+            .caption {
+
+                h2 {
+                    // font-size: 2.3rem;
+                    // line-height: 45px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin-bottom: 40px;
+                }
+
+                a {
+                    padding: .7rem 1.2rem;
+                }
+            }
+
+
+            img {
+                width: 90%;
+            }
+        }
+    }
+
+
+    .join {
+
+        .container {
+
+            img {
+                width: 80%;
+
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                line-height: 35px;
+            }
+
+        }
+    }
+
+}
+
+
+
+
+
+
+@media(max-width:400px) {
+
+
+    .navMobile {
+
+        ul {
+            width: 85%;
+
+            li {
+                padding: 5px 0;
+
+                a {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .menu {
+        height: 20px;
+    }
+
+    header {
+
+        .container {
+
+            .logo {
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+
+    .heroHome {
+
+        .container {
+
+            .caption {
+
+                h1 {
+                    font-size: 1.7rem;
+                    line-height: 35px;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+
+
+    .kelasHome {
+
+        .title {
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+
+
+
+
+    .title {
+        p {
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+    }
+
+    .webinar {
+
+        .container {
+
+            .caption {
+
+                h2 {
+                    font-size: 1.7rem;
+                    line-height: 35px;
+                }
+
+                a {
+                    font-size: .9rem;
+                }
+            }
+
+
+            img {
+                width: 80%;
+                height: 250px;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+@media(max-width:350px) {
+
+
+    .navMobile {
+
+        ul {
+
+            .auth {
+                flex-wrap: wrap;
+
+                a {
+                    width: 100%;
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+
+    .kelas {
+
+        .perKelas {
+            margin: 10px 0;
+
+            .deskripsiSingkat {
+                font-size: .8rem;
+            }
+
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .info {
+
+                .perInfo {
+                    font-size: .8rem;
+
+                    p {
+                        font-size: .8rem;
+                    }
+
+                }
+
+
+                .harga {
+                    font-size: 1rem;
+                }
+
+
+            }
+
+            .btn {
+
+                a {
+                    font-size: .9rem;
+                }
+            }
+
+
+        }
+    }
+
+
+
+
+
+    .join {
+
+        .container {
+
+            h1 {
+                font-size: 1.3rem;
+                line-height: 30px;
+            }
+
         }
     }
 

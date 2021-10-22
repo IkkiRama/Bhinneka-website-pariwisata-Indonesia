@@ -239,7 +239,7 @@ header .container nav ul li a:hover {
   width: 100%;
   height: 4px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .menu span:nth-child(2) {
@@ -436,7 +436,7 @@ header .container nav ul li a:hover {
 }
 
 .penjelasan .fitur .perFitur {
-  width: 25%;
+  width: calc(90%/3);
   margin: .9rem;
   padding: 20px;
   background-color: #fff;
@@ -502,6 +502,14 @@ header .container nav ul li a:hover {
   border: 2px solid #e4e4e7;
 }
 
+.kelas .perKelas .deskripsiSingkat {
+  margin-top: 20px;
+  padding: 0 10px;
+  font-size: 1rem;
+  color: #34364A;
+  font-weight: 500;
+}
+
 .kelas .perKelas img {
   width: 100%;
   height: 250px;
@@ -552,6 +560,7 @@ header .container nav ul li a:hover {
 .kelas .perKelas .info .perInfo p {
   font-weight: 500;
   margin-left: 5px;
+  color: #5438d3;
 }
 
 .kelas .perKelas .info .harga {
@@ -658,60 +667,27 @@ header .container nav ul li a:hover {
 
 /* webinar end */
 /* testimoni start */
-.testimoni {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.penjelasan .testimoni .perFitur {
+  min-height: 350px;
+  max-height: 100%;
 }
 
-.testimoni .container .caption.active {
-  -webkit-animation: fadeup .6s ease-in-out forwards;
-          animation: fadeup .6s ease-in-out forwards;
+.penjelasan .testimoni .perFitur h3 {
+  font-weight: 650;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
-.testimoni .container .caption h2 {
-  font-size: 2rem;
-}
-
-.testimoni .container .caption h3 {
+.penjelasan .testimoni .perFitur h4 {
   color: #6f6f74;
-  font-weight: 500;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-weight: 550;
+  margin-bottom: 15px;
 }
 
-.testimoni .container .caption p {
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.testimoni .container .caption img {
-  width: 125px;
-  height: 125px;
+.penjelasan .testimoni .perFitur img {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-}
-
-.testimoni .container .img img {
-  width: 90px;
-  height: 90px;
-  padding: 5px;
-  margin: 0 5px;
-  cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
-  border-radius: 50%;
-  border: 2px solid #fefefe;
-}
-
-.testimoni .container .img img:hover, .testimoni .container .img img.active {
-  border: 2px solid #555fb9;
 }
 
 /* testimoni end */
@@ -725,7 +701,6 @@ header .container nav ul li a:hover {
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-top: 70px;
 }
 
 .join .container {
@@ -1498,13 +1473,30 @@ form button {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .penjelasan .fitur .perFitur {
+    width: calc(90%/2);
+  }
+  .kelas {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .kelas .perKelas {
+    width: calc(90%/2);
+  }
+  .kelas .perKelas .deskripsiSingkat {
+    font-size: .9rem;
+  }
+  .join .container h1 {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 1000px) {
   header,
   section,
   footer {
-    padding: 0 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   header .container {
     -webkit-box-pack: center;
@@ -1522,11 +1514,348 @@ form button {
     display: -ms-flexbox;
     display: flex;
   }
+  .heroHome .container .hero-img {
+    height: 100%;
+  }
+  .heroHome .container .hero-img .thumbnail {
+    height: 100%;
+  }
   .heroHome .container .caption a {
     padding: .9rem 1.8rem;
   }
-  .penjelasan .fitur .perFitur {
-    width: calc(90%/2);
+  .kelasHome .title h2 {
+    font-size: 1.7rem;
+  }
+  .kelasHome .title a {
+    padding: 10px 15px;
+  }
+  .webinar .container .caption h2 {
+    font-size: 2.5rem;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  .webinar .container .caption p {
+    font-size: 1.2rem;
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+  .webinar .container .caption a {
+    padding: .9rem 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .join .container h1 {
+    font-size: 1.8rem;
+    line-height: 40px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 800px) {
+  header,
+  section,
+  footer {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .menu {
+    left: 25px;
+  }
+  .heroHome {
+    padding-top: 0;
+  }
+  .heroHome .container {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+  .heroHome .container .hero-img {
+    display: none;
+  }
+  .heroHome .container .caption {
+    width: 100%;
+  }
+  .heroHome .container .caption h1 {
+    font-size: 2.5rem;
+  }
+  .heroHome .container .caption p {
+    font-size: 1.2rem;
+    line-height: 30px;
+    margin-bottom: 60px;
+  }
+  .heroHome .container .caption a {
+    padding: .9rem 1.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .kelasHome .title {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .kelasHome .title h2 {
+    font-size: 2rem;
+  }
+  .kelasHome .title a {
+    display: none;
+  }
+  .kelas .perKelas {
+    width: calc(95%/2);
+    margin: 10px 5px;
+  }
+  .kelas .perKelas .deskripsiSingkat {
+    font-size: .9rem;
+  }
+  .webinar .container .caption h2 {
+    font-size: 2.3rem;
+    line-height: 45px;
+  }
+  .webinar .container .caption p {
+    font-size: 1.1rem;
+    line-height: 25px;
+  }
+  .webinar .container .caption a {
+    padding: .7rem 1.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .penjelasan .container .fitur .perFitur {
+    width: 80%;
+  }
+  .penjelasan .container .testimoni .perFitur {
+    min-height: 300px;
+  }
+  .kelasHome .title h2 {
+    font-size: 2rem;
+  }
+  .kelas .perKelas {
+    width: 80%;
+    margin: 10px 5px;
+  }
+  .title p {
+    font-size: 1.2rem;
+  }
+  .title h2 {
+    font-size: 2rem;
+    line-height: 45px;
+  }
+  .webinar .container {
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+  .webinar .container .caption {
+    width: 100%;
+  }
+  .webinar .container img {
+    width: 60%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .join .container {
+    height: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .join .container img {
+    margin-bottom: 30px;
+  }
+  .join .container h1 {
+    font-size: 2rem;
+    line-height: 45px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .navMobile ul {
+    width: 70%;
+  }
+  .penjelasan .container .fitur .perFitur {
+    width: 90%;
+  }
+  .kelasHome .title h2 {
+    font-size: 1.8rem;
+  }
+  .kelas .perKelas {
+    width: 90%;
+  }
+  .title p {
+    font-size: 1.1rem;
+  }
+  .title h2 {
+    font-size: 1.8rem;
+    line-height: 35px;
+  }
+  .webinar .container .caption {
+    width: 100%;
+  }
+  .webinar .container .caption h2 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .webinar .container img {
+    width: 80%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  header,
+  section,
+  footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .menu {
+    left: 15px;
+  }
+  .heroHome .container .caption h1 {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .heroHome .container .caption p {
+    font-size: 1.1rem;
+    line-height: 25px;
+  }
+  .penjelasan .container .fitur .perFitur {
+    width: 100%;
+    margin: 12px 0;
+  }
+  .penjelasan .container .testimoni .perFitur {
+    min-height: 350px;
+  }
+  .kelasHome .title h2 {
+    font-size: 1.8rem;
+  }
+  .kelas .perKelas {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .title p {
+    font-size: 1rem;
+  }
+  .title h2 {
+    font-size: 1.5rem;
+  }
+  .webinar .container .caption h2 {
+    margin-bottom: 20px;
+  }
+  .webinar .container .caption p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .webinar .container .caption a {
+    padding: .7rem 1.2rem;
+  }
+  .webinar .container img {
+    width: 90%;
+  }
+  .join .container img {
+    width: 80%;
+  }
+  .join .container h1 {
+    font-size: 1.5rem;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navMobile ul {
+    width: 85%;
+  }
+  .navMobile ul li {
+    padding: 5px 0;
+  }
+  .navMobile ul li a {
+    font-size: 1rem;
+  }
+  .menu {
+    height: 20px;
+  }
+  header .container .logo h1 {
+    font-size: 1.5rem;
+  }
+  .heroHome .container .caption h1 {
+    font-size: 1.7rem;
+    line-height: 35px;
+  }
+  .heroHome .container .caption p {
+    font-size: 1rem;
+  }
+  .kelasHome .title h2 {
+    font-size: 1.5rem;
+  }
+  .title p {
+    font-size: 1rem;
+  }
+  .title h2 {
+    font-size: 1.4rem;
+  }
+  .webinar .container .caption h2 {
+    font-size: 1.7rem;
+    line-height: 35px;
+  }
+  .webinar .container .caption a {
+    font-size: .9rem;
+  }
+  .webinar .container img {
+    width: 80%;
+    height: 250px;
+  }
+}
+
+@media (max-width: 350px) {
+  .navMobile ul .auth {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .navMobile ul .auth a {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .kelas .perKelas {
+    margin: 10px 0;
+  }
+  .kelas .perKelas .deskripsiSingkat {
+    font-size: .8rem;
+  }
+  .kelas .perKelas h3 {
+    font-size: 1.2rem;
+  }
+  .kelas .perKelas .info .perInfo {
+    font-size: .8rem;
+  }
+  .kelas .perKelas .info .perInfo p {
+    font-size: .8rem;
+  }
+  .kelas .perKelas .info .harga {
+    font-size: 1rem;
+  }
+  .kelas .perKelas .btn a {
+    font-size: .9rem;
+  }
+  .join .container h1 {
+    font-size: 1.3rem;
+    line-height: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
