@@ -1088,7 +1088,7 @@ footer hr {
 
 .heroKelas {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     overflow: hidden;
     position: relative;
     background-color: #1352FF;
@@ -1117,6 +1117,7 @@ footer hr {
                 color: #fefefe;
                 font-size: 1.3rem;
                 line-height: 30px;
+                font-weight: 500;
                 margin-bottom: 50px;
             }
 
@@ -1139,19 +1140,19 @@ footer hr {
             .heroImg {
                 transform: translateX(150px);
                 position: relative;
-                width: 75%;
+                width: 80%;
                 height: 100%;
                 z-index: 99;
             }
 
-            .bg {
-                width: 80%;
-                // height: 100%;
-                position: absolute;
-                // top: 0;
-                bottom: -20px;
-                right: -350px;
-            }
+            // .bg {
+            //     width: 80%;
+            //     // height: 100%;
+            //     position: absolute;
+            //     top: ;
+            //     bottom: 0;
+            //     right: -250px;
+            // }
         }
     }
 }
@@ -1198,7 +1199,7 @@ footer hr {
                     margin-bottom: 20px;
 
                     img {
-                        width: 100%;
+                        width: 80%;
                         height: 80%;
                     }
                 }
@@ -2043,6 +2044,43 @@ form {
 
 
 
+
+    .containerFiturKelas {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #f8fafc;
+
+        .container {
+            // padding: 20px 30px;
+            border-radius: 1rem;
+            background-color: #fff;
+            border: var(--border);
+
+            h2 {
+                padding: 20px;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #ce231c;
+                border-bottom: 1px solid #ce231c;
+            }
+
+            .fitur {
+                flex-wrap: wrap;
+
+                .perFitur {
+                    width: calc(100%/2);
+                    margin: 10px 0;
+
+                    p {
+                        // font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+
 }
 
 
@@ -2149,6 +2187,42 @@ form {
     }
 
 
+
+
+
+    .heroKelas {
+
+
+        .container {
+
+            .caption {
+
+                h1 {
+                    font-size: 2rem;
+                    line-height: 40px;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    line-height: 25px;
+                }
+
+                a {
+                    padding: .5rem 1.2rem;
+                }
+            }
+
+            .img {
+
+                .heroImg {
+                    transform: translateX(0);
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
 }
 
 
@@ -2186,40 +2260,6 @@ form {
         left: 25px;
     }
 
-    // .heroHome {
-    //     .container {
-
-    //         .hero-img {
-    //             // width: 50%;
-    //             height: 100%;
-
-    //             .thumbnail {
-    //                 height: 100%;
-    //             }
-    //         }
-
-    //         .caption {
-    //             // width: 50%;
-
-    //             h1 {
-    //                 font-size: 2.4rem;
-    //                 margin-bottom: 40px;
-    //             }
-
-    //             p {
-    //                 font-size: 1.1rem;
-    //                 margin-bottom: 60px;
-    //             }
-
-    //             a {
-    //                 padding: .9rem 1.5rem;
-    //             }
-    //         }
-    //     }
-    // }
-
-
-
     .heroHome {
         padding-top: 0;
 
@@ -2246,6 +2286,47 @@ form {
 
                 a {
                     padding: .9rem 1.5rem;
+                }
+            }
+        }
+    }
+
+
+
+
+    .heroKelas {
+        height: 100vh;
+
+
+        .container {
+            text-align: center;
+            justify-content: center;
+
+            .caption {
+                width: 100%;
+                margin-right: 0;
+
+                h1 {
+                    font-size: 2.5rem;
+                    line-height: 50px;
+                }
+
+                p {
+                    font-size: 1.3rem;
+                    line-height: 30px;
+                }
+
+                a {
+                    padding: .8rem 1.5rem;
+                }
+            }
+
+            .img {
+                display: none;
+
+                .heroImg {
+                    // transform: translateX(0);
+                    // width: 100%;
                 }
             }
         }
@@ -2284,25 +2365,6 @@ form {
             .deskripsiSingkat {
                 font-size: .9rem;
             }
-
-            img {}
-
-            h3 {}
-
-            .info {
-
-                .perInfo {
-
-                    p {}
-
-                }
-
-
-                .harga {}
-
-
-            }
-
 
         }
     }
@@ -2451,6 +2513,35 @@ form {
                 margin-left: 0;
             }
 
+        }
+    }
+
+
+
+    .dataKelas {
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+
+
+
+    .containerFiturKelas {
+
+        .container {
+
+            h2 {
+                text-align: center;
+            }
+
+            .fitur {
+
+                .perFitur {
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -2685,6 +2776,32 @@ form {
         }
     }
 
+
+
+
+    .heroKelas {
+
+        .container {
+
+            .caption {
+
+                h1 {
+                    font-size: 2rem;
+                    line-height: 40px;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    line-height: 25px;
+                }
+
+                a {
+                    padding: .8rem 1.5rem;
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -2880,5 +2997,64 @@ form {
 
         }
     }
+
+    .footer .box .sosmed .perSosmed {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    .footer .box a {
+        font-size: .9rem;
+        padding: .2rem 0;
+    }
+
+
+
+
+    .heroKelas {
+
+        .container {
+
+            .caption {
+
+                h1 {
+                    font-size: 1.7rem;
+                    line-height: 35px;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .containerFiturKelas {
+
+        .container {
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            .fitur {
+
+                .perFitur {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    .dataKelas {
+
+        h2 {
+            font-size: 1.7rem;
+        }
+    }
+
+
 
 }
