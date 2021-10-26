@@ -1146,6 +1146,7 @@ footer hr {
 
 .bg-profil .container {
   background-image: url("../img/profil/profile-banner-desktop.png");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   -o-object-fit: cover;
@@ -1277,6 +1278,7 @@ footer hr {
 .profil .container .profil-orang .detail-orang a {
   margin-top: 30px;
   width: 100%;
+  font-weight: 600;
 }
 
 .profil .container .profil-kelas {
@@ -1510,6 +1512,13 @@ form button {
   }
 }
 
+@media (max-width: 1100px) {
+  .profil .container .profil-orang,
+  .profil .container .profil-kelas {
+    width: 50%;
+  }
+}
+
 @media (max-width: 1000px) {
   header,
   section,
@@ -1649,6 +1658,25 @@ form button {
   .heroKelas .container .img {
     display: none;
   }
+  .profil .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .profil .container .profil-orang,
+  .profil .container .profil-kelas {
+    width: 100%;
+  }
+  .profil .container .profil-orang .detail-orang .tentangSaya {
+    text-align: center;
+  }
+  .profil .container .profil-kelas {
+    margin-top: 20px;
+    margin-left: 0;
+    padding-bottom: 30px;
+  }
+  .bg-profil .container {
+    background-image: url("../img/profil/profile-banner-mobile.png");
+  }
 }
 
 @media (max-width: 750px) {
@@ -1752,6 +1780,9 @@ form button {
   }
   .containerFiturKelas .container .fitur .perFitur {
     width: 100%;
+  }
+  .kelasYangDimiliki .container h2 {
+    text-align: center;
   }
 }
 
@@ -1903,6 +1934,14 @@ form button {
     width: 80%;
     height: 250px;
   }
+  .profil .container .profil-kelas .codeBadgeKosong img {
+    width: 70px;
+    height: 70px;
+  }
+  .profil .container .profil-kelas .codeBadgeKosong h1 {
+    font-size: 1.3rem;
+    line-height: 30px;
+  }
 }
 
 @media (max-width: 350px) {
@@ -1939,9 +1978,21 @@ form button {
     font-size: 1.3rem;
     line-height: 30px;
   }
+  .footer .box .sosmed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
   .footer .box .sosmed .perSosmed {
     width: 35px;
     height: 35px;
+    margin: 0;
+    font-size: 1.2rem;
   }
   .footer .box a {
     font-size: .9rem;
@@ -1962,6 +2013,56 @@ form button {
   }
   .dataKelas h2 {
     font-size: 1.7rem;
+  }
+  .profil .container .profil-orang .icon {
+    padding: 5px 10px;
+    font-size: .8rem;
+  }
+  .profil .container .profil-orang .detail-orang {
+    margin-top: -60px;
+  }
+  .profil .container .profil-orang .detail-orang img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .profil .container .profil-orang .detail-orang h2 {
+    font-size: 1.3rem;
+  }
+  .profil .container .profil-orang .detail-orang .email {
+    font-size: .9rem;
+  }
+  .profil .container .profil-orang .detail-orang .sekolah {
+    font-size: 1rem;
+  }
+  .profil .container .profil-orang .detail-orang .tentangSaya p {
+    font-size: .9rem;
+    line-height: 20px;
+  }
+  .profil .container .profil-orang .detail-orang a {
+    padding: 8px;
+  }
+  .profil .container .profil-kelas .codeBadgeKosong p {
+    font-size: .9rem;
+    line-height: 20px;
+  }
+  .kelasYangDimiliki .container {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+  .kelasYangDimiliki .container h2 {
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-bottom: 0;
+    background-color: #fff;
+    border: var(--border);
+  }
+}
+
+@media (max-width: 300px) {
+  .menu {
+    width: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */

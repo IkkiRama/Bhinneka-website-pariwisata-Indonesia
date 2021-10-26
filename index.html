@@ -449,12 +449,10 @@
     <!-- footer end -->
 
 
-
+    <script src="js/script.js"></script>
 
     <script type="text/javascript">
         let navbar = document.querySelector("header")
-        let navMobile = document.querySelector(".navMobile")
-        let menu = document.querySelectorAll(".menu")
 
         //change warna saat scroll
         window.addEventListener("scroll", () => {
@@ -462,13 +460,6 @@
             navbar.classList.toggle('bg-white', navbarPos)
         })
 
-
-        //hamburger togle
-        menu.forEach(m => {
-            m.addEventListener("click", () => {
-                navMobile.classList.toggle("show")
-            })
-        })
 
 
 

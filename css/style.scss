@@ -1445,6 +1445,7 @@ footer hr {
 
     .container {
         background-image: url("../img/profil/profile-banner-desktop.png");
+        background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
         object-fit: cover;
@@ -1565,6 +1566,7 @@ footer hr {
                 a {
                     margin-top: 30px;
                     width: 100%;
+                    font-weight: 600;
                 }
             }
         }
@@ -2085,6 +2087,20 @@ form {
 
 
 
+@media(max-width:1100px) {
+    .profil {
+
+        .container {
+
+            .profil-orang,
+            .profil-kelas {
+                width: 50%;
+            }
+        }
+    }
+
+}
+
 @media(max-width:1000px) {
 
     header,
@@ -2332,6 +2348,53 @@ form {
         }
     }
 
+
+
+
+
+
+
+    .profil {
+
+        .container {
+            flex-wrap: wrap;
+
+            .profil-orang,
+            .profil-kelas {
+                width: 100%;
+            }
+
+            .profil-orang {
+
+                .detail-orang {
+
+                    .tentangSaya {
+                        text-align: center;
+                    }
+
+                }
+            }
+
+
+
+            .profil-kelas {
+                margin-top: 20px;
+                margin-left: 0;
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+
+    .bg-profil {
+
+        .container {
+            background-image: url("../img/profil/profile-banner-mobile.png");
+
+        }
+    }
+
+
 }
 
 
@@ -2403,6 +2466,9 @@ form {
             }
         }
     }
+
+
+
 
 
 
@@ -2541,6 +2607,19 @@ form {
                 .perFitur {
                     width: 100%;
                 }
+            }
+        }
+    }
+
+
+
+
+    .kelasYangDimiliki {
+
+        .container {
+
+            h2 {
+                text-align: center;
             }
         }
     }
@@ -2913,6 +2992,34 @@ form {
         }
     }
 
+
+
+
+
+
+    .profil {
+
+        .container {
+
+            .profil-kelas {
+
+                .codeBadgeKosong {
+
+                    img {
+                        width: 70px;
+                        height: 70px;
+                    }
+
+                    h1 {
+                        font-size: 1.3rem;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+
 }
 
 
@@ -2998,9 +3105,17 @@ form {
         }
     }
 
+    .footer .box .sosmed {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
     .footer .box .sosmed .perSosmed {
         width: 35px;
         height: 35px;
+        margin: 0;
+        font-size: 1.2rem;
     }
 
 
@@ -3057,4 +3172,105 @@ form {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    .profil {
+
+        .container {
+
+            .profil-orang {
+
+                .icon {
+                    padding: 5px 10px;
+                    font-size: .8rem;
+                }
+
+                .detail-orang {
+                    margin-top: -60px;
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        margin-bottom: 10px;
+                    }
+
+                    h2 {
+                        font-size: 1.3rem;
+                    }
+
+                    .email {
+                        font-size: .9rem;
+                    }
+
+                    .sekolah {
+                        font-size: 1rem;
+
+                    }
+
+
+                    .tentangSaya {
+
+                        p {
+                            font-size: .9rem;
+                            line-height: 20px;
+                        }
+                    }
+
+                    a {
+                        padding: 8px;
+                    }
+                }
+            }
+
+            .profil-kelas {
+
+                .codeBadgeKosong {
+
+                    p {
+                        font-size: .9rem;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .kelasYangDimiliki {
+
+        .container {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+
+            h2 {
+                font-size: 1.3rem;
+                padding: 10px;
+                margin-bottom: 0;
+                background-color: #fff;
+                border: var(--border);
+            }
+        }
+    }
+
+
+
+}
+
+
+
+@media(max-width:300px) {
+    .menu {
+        width: 30px;
+    }
 }
