@@ -284,7 +284,7 @@ header {
     background-color: rgba(22, 22, 22, 0.445);
     z-index: 9999999999;
     transform: translateX(-150%);
-    display: flex;
+    display: none;
     transition: .5s;
 
     ul {
@@ -2216,6 +2216,11 @@ form {
         display: flex;
     }
 
+
+    .navMobile {
+        display: flex;
+    }
+
     .heroHome {
         .container {
 
@@ -2343,6 +2348,34 @@ form {
                 letter-spacing: 1px;
             }
 
+        }
+    }
+
+
+    .kontak {
+        // height: 100vh;
+
+        .container {
+            flex-wrap: wrap;
+
+            .caption,
+            img {
+                width: 100%;
+            }
+
+            img {
+                height: 30rem;
+                margin-bottom: 50px;
+            }
+
+            .caption {
+                margin-left: 0;
+
+
+                h1 {
+                    text-align: center;
+                }
+            }
         }
     }
 }
@@ -2883,6 +2916,20 @@ form {
 
 
 
+    .kontak {
+
+        .container {
+
+            img {
+                height: 30rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+
+
 }
 
 
@@ -3055,6 +3102,17 @@ form {
 
 
 
+    .kontak {
+
+        .container {
+
+            img {
+                height: 20rem;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
 
 
 }
@@ -3202,6 +3260,33 @@ form {
 
             img {
                 height: 250px;
+            }
+        }
+    }
+
+
+
+    .kontak {
+
+        .container {
+
+            img {
+                height: 15rem;
+                // margin-bottom: 10px;
+            }
+
+
+            .caption {
+
+
+                h1 {
+                    font-size: 1.9rem;
+                }
+
+                textarea,
+                input {
+                    font-size: .9rem;
+                }
             }
         }
     }
@@ -3487,5 +3572,37 @@ form {
 @media(max-width:300px) {
     .menu {
         width: 30px;
+    }
+
+
+    .kontak {
+
+        .container {
+
+            img {
+                height: 10rem;
+                // margin-bottom: 10px;
+            }
+
+
+
+            .caption {
+
+
+                h1 {
+                    font-size: 1.6rem;
+                }
+
+                label {
+                    font-size: .95rem;
+                }
+
+                textarea,
+                input {
+                    padding-left: 10px;
+                    font-size: .8rem;
+                }
+            }
+        }
     }
 }

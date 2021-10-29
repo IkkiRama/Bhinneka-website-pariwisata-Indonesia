@@ -266,9 +266,7 @@ header .container nav ul li a:hover {
   z-index: 9999999999;
   -webkit-transform: translateX(-150%);
           transform: translateX(-150%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -1567,6 +1565,11 @@ form button {
     display: -ms-flexbox;
     display: flex;
   }
+  .navMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .heroHome .container .hero-img {
     height: 100%;
   }
@@ -1618,6 +1621,24 @@ form button {
     font-size: 1.8rem;
     line-height: 40px;
     letter-spacing: 1px;
+  }
+  .kontak .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .kontak .container .caption,
+  .kontak .container img {
+    width: 100%;
+  }
+  .kontak .container img {
+    height: 30rem;
+    margin-bottom: 50px;
+  }
+  .kontak .container .caption {
+    margin-left: 0;
+  }
+  .kontak .container .caption h1 {
+    text-align: center;
   }
 }
 
@@ -1900,6 +1921,10 @@ form button {
     height: 300px;
     margin-bottom: 20px;
   }
+  .kontak .container img {
+    height: 30rem;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1971,6 +1996,10 @@ form button {
   .heroKelas .container .caption a {
     padding: .8rem 1.5rem;
   }
+  .kontak .container img {
+    height: 20rem;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -2026,6 +2055,16 @@ form button {
   }
   .heroDetailKelas .container img {
     height: 250px;
+  }
+  .kontak .container img {
+    height: 15rem;
+  }
+  .kontak .container .caption h1 {
+    font-size: 1.9rem;
+  }
+  .kontak .container .caption textarea,
+  .kontak .container .caption input {
+    font-size: .9rem;
   }
 }
 
@@ -2157,6 +2196,20 @@ form button {
 @media (max-width: 300px) {
   .menu {
     width: 30px;
+  }
+  .kontak .container img {
+    height: 10rem;
+  }
+  .kontak .container .caption h1 {
+    font-size: 1.6rem;
+  }
+  .kontak .container .caption label {
+    font-size: .95rem;
+  }
+  .kontak .container .caption textarea,
+  .kontak .container .caption input {
+    padding-left: 10px;
+    font-size: .8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
