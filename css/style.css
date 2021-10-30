@@ -1074,10 +1074,15 @@ footer hr {
   background-color: #fff;
 }
 
+.detailKelas .container .tentangKelas .perTentangKelas p {
+  line-height: 30px;
+  font-weight: 450;
+}
+
 .detailKelas .container .tentangKelas .perTentangKelas .materi p {
   padding: 20px;
   margin: 10px 0;
-  font-weight: 500;
+  font-weight: 550;
   border-radius: 10px;
   background-color: #EFF2F6;
 }
@@ -1346,9 +1351,10 @@ footer hr {
   margin-bottom: 20px;
 }
 
-.tentangKami .container .caption p {
+.tentangKami .container .caption .deskripsi p {
   line-height: 25px;
   font-size: 1.1rem;
+  margin: 15px 0;
 }
 
 .kontak {
@@ -1409,6 +1415,15 @@ form .form-group input {
   border: 1px solid #e4e4e7;
   background-color: #fff;
   letter-spacing: .5px;
+}
+
+form .form-group textarea:focus,
+form .form-group input:focus {
+  outline: 2px solid #0176f4bd;
+}
+
+form button:focus {
+  outline: 2px solid #63aeffbd;
 }
 
 form button {
@@ -1767,6 +1782,9 @@ form button {
   .detailKelas .container .tentangKelas {
     width: 100%;
     margin-right: 0;
+  }
+  .detailKelas .container .tentangKelas .perTentangKelas p {
+    line-height: 25px;
   }
   .detailKelas .container .infoKelas {
     width: 100%;

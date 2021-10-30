@@ -52,6 +52,11 @@ label {
 }
 
 
+// input:focus {
+//     border: 2px solid #0176f4bd;
+// }
+
+
 .pt-15-vh {
     padding-top: 15vh;
 }
@@ -1365,12 +1370,17 @@ footer hr {
                 border: var(--border);
                 background-color: #fff;
 
+                p {
+                    line-height: 30px;
+                    font-weight: 450;
+                }
+
                 .materi {
 
                     p {
                         padding: 20px;
                         margin: 10px 0;
-                        font-weight: 500;
+                        font-weight: 550;
                         border-radius: 10px;
                         background-color: #EFF2F6;
                     }
@@ -1695,9 +1705,12 @@ footer hr {
                 margin-bottom: 20px;
             }
 
-            p {
-                line-height: 25px;
-                font-size: 1.1rem;
+            .deskripsi {
+                p {
+                    line-height: 25px;
+                    font-size: 1.1rem;
+                    margin: 15px 0;
+                }
             }
         }
     }
@@ -1871,6 +1884,15 @@ form {
             background-color: #fff;
             letter-spacing: .5px;
         }
+
+        textarea:focus,
+        input:focus {
+            outline: 2px solid #0176f4bd;
+        }
+    }
+
+    button:focus {
+        outline: 2px solid #63aeffbd;
     }
 
 
@@ -1885,6 +1907,20 @@ form {
         background-color: #1352FF;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2560,6 +2596,14 @@ form {
             .tentangKelas {
                 width: 100%;
                 margin-right: 0;
+
+
+                .perTentangKelas {
+
+                    p {
+                        line-height: 25px;
+                    }
+                }
             }
 
             .infoKelas {
