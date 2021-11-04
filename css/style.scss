@@ -52,6 +52,7 @@ label {
 }
 
 
+
 // input:focus {
 //     border: 2px solid #0176f4bd;
 // }
@@ -88,7 +89,7 @@ label {
 }
 
 .flex-wrap {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
 }
 
 .justify-content {
@@ -98,11 +99,17 @@ label {
 
 button {
     border: none;
+    cursor: pointer;
 }
 
 section {
     padding: 0 100px;
 }
+
+
+
+
+
 
 header.bg-white {
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
@@ -159,7 +166,7 @@ header {
 
     .container {
         max-height: 100%;
-        min-height: 11vh;
+        height: 11vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -360,7 +367,7 @@ header {
 .heroHome {
     width: 100%;
     height: 100vh;
-    background-color: #1352FF;
+    // background-color: #1352FF;
 
 
     .container {
@@ -372,6 +379,7 @@ header {
 
         .hero-img {
             width: 45%;
+            height: 100%;
             // flex: .1;
             // height: 100%;
 
@@ -388,31 +396,28 @@ header {
             h1 {
                 font-size: 3.1rem;
                 font-weight: 800;
-                margin-bottom: 30px;
+                margin-bottom: 50px;
                 line-height: 60px;
-                color: #fefefe;
-
-                span {
-                    color: rgb(255, 160, 17);
-                }
+                color: #302f2f;
+                // color: #fefefe;
             }
 
             p {
                 font-size: 1.3rem;
                 line-height: 30px;
                 margin-bottom: 60px;
-                color: #fefefe;
+                color: #302f2f;
             }
 
             a {
                 border-radius: 55px;
-                background-color: #fff;
+                background-color: #1352FF;
                 padding: 1rem 2.5rem;
                 font-weight: 600;
                 font-size: 17px;
                 cursor: pointer;
                 transition: all 200ms;
-                color: #1352FF;
+                color: #fefefe;
             }
         }
 
@@ -463,13 +468,19 @@ header {
             border-radius: .5rem;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
-
-            img {
-                height: 80px;
+            .icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.4rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #ffa011;
             }
 
             h3 {
-                font-weight: 600;
+                font-weight: 650;
                 margin: 30px 0 10px 0;
                 font-size: 1.4rem;
                 color: #302f2f;
@@ -481,33 +492,6 @@ header {
         }
     }
 }
-
-
-.kelasHome {
-
-    .title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 30px;
-
-        a {
-            color: #4256ac;
-            font-weight: 600;
-            padding: 15px 20px;
-            border-radius: .5rem;
-            border: 2px solid #bdbdbe;
-
-            &:hover {
-                background-color: #e6e9f5;
-            }
-        }
-    }
-
-}
-
-
-
 
 
 .kelas {
@@ -527,6 +511,7 @@ header {
             font-size: 1rem;
             color: #34364A;
             font-weight: 500;
+            margin-bottom: 50px;
         }
 
         img {
@@ -543,45 +528,6 @@ header {
             font-size: 1.5rem;
             color: #302f2f;
         }
-
-        .info {
-            display: flex;
-            padding: 20px;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 2px solid #e4e4e7;
-
-            .perInfo {
-                font-size: .9rem;
-                padding: 10px 20px;
-                color: #5438d3;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                background: #e0e4f3;
-                border-radius: .5rem;
-                // flex-grow: 1; ce231c
-
-                p {
-                    font-weight: 500;
-                    margin-left: 5px;
-                    color: #5438d3;
-                }
-
-            }
-
-
-            .harga {
-                font-size: 1.2rem;
-                color: #ce231c;
-                font-weight: 600;
-                letter-spacing: .5px;
-            }
-
-
-        }
-
-
 
         .btn {
             display: flex;
@@ -606,6 +552,59 @@ header {
 
 
 
+.kelasHome {
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            color: #4256ac;
+            font-weight: 600;
+            padding: 15px 20px;
+            border-radius: .5rem;
+            border: 2px solid #bdbdbe;
+
+            &:hover {
+                background-color: #e6e9f5;
+            }
+        }
+    }
+
+}
+
+
+.provinsi {
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .perProvinsi {
+            height: 400px;
+            width: calc(90%/4);
+            margin: 0 10px;
+
+            &:hover h3 {
+                opacity: .8;
+            }
+
+            img {
+                width: 100%;
+                height: 280px;
+                margin-bottom: 20px;
+                border-radius: 20px;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
 
 
 
@@ -1084,7 +1083,19 @@ footer hr {
 
 
 
+.destinasiHero {
 
+    .container {
+
+        .hero-img {
+            height: 100%;
+
+            .thumbnail {
+                height: 90%;
+            }
+        }
+    }
+}
 
 
 
@@ -1095,10 +1106,10 @@ footer hr {
 
 .heroKelas {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
-    background-color: #1352FF;
+    // background-color: #1352FF;
     // background-color: #eff2f6;
 
 
@@ -1112,7 +1123,7 @@ footer hr {
             width: 50%;
 
             h1 {
-                color: #fefefe;
+                // color: #fefefe;
                 font-size: 2.5rem;
                 font-weight: 700;
                 margin-bottom: 40px;
@@ -1121,7 +1132,7 @@ footer hr {
             }
 
             p {
-                color: #fefefe;
+                // color: #fefefe;
                 font-size: 1.3rem;
                 line-height: 30px;
                 font-weight: 500;
@@ -1130,25 +1141,26 @@ footer hr {
 
             a {
                 border-radius: 10px;
-                background-color: #fefefe;
+                background-color: #1352FF;
                 padding: .8rem 2rem;
                 font-weight: 600;
                 font-size: 1rem;
                 cursor: pointer;
                 transition: all 200ms;
-                color: #1352FF;
+                color: #fefefe;
             }
         }
 
         .img {
             width: 50%;
+            height: 100%;
             // position: relative;
 
             .heroImg {
-                transform: translateX(150px);
-                position: relative;
-                width: 80%;
-                height: 100%;
+                // transform: translateX(150px);
+                // position: relative;
+                width: 100%;
+                height: 90%;
                 z-index: 99;
             }
 
@@ -1411,9 +1423,11 @@ footer hr {
                     border-radius: 10px;
                     background-color: #EFF2F6;
 
-                    img {
-                        height: 40px;
+                    .icon {
+                        color: #ffa011;
+                        font-size: 1.6rem;
                         margin-right: 10px;
+
                     }
                 }
 
@@ -1952,6 +1966,475 @@ form {
 
 
 
+/* Halaman Per Artikel start */
+.contentArtikel {
+    /* width: 60%; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    /* padding: 150px 250px 200px 250px; */
+}
+
+.contentArtikel .container {
+    width: 60%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.contentArtikel .container .titleArtikel {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 40px;
+    color: #302f2f;
+}
+
+.contentArtikel .container .writer {
+    font-size: 1rem;
+    color: #302f2f;
+    margin: 20px 0;
+}
+
+.contentArtikel .container .thumbnail {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.contentArtikel .container h3 {
+    font-size: 1.5rem;
+    color: #302f2f;
+}
+
+.contentArtikel .container p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #302f2f;
+    line-height: 30px;
+}
+
+
+
+
+
+
+.rekomendasiArtikel {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #eff2f6;
+
+    .container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .title {
+            width: 100%;
+            font-size: 2rem;
+            color: #302f2f;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+
+        .perArtikel {
+            width: calc(90%/3);
+            margin: 15px 10px;
+            /* padding: 20px; */
+            border-radius: 10px;
+            border: 2px solid #e4e4e7;
+            background-color: #fff;
+
+
+            img {
+                width: 100%;
+                height: 250px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                line-height: 27px;
+                text-transform: capitalize;
+                color: #302f2f;
+                margin: 10px 0;
+                padding: 0 10px;
+            }
+
+            p {
+                color: #302f2f;
+                font-size: .9rem;
+                /* font-weight: 500; */
+                padding: 0 10px;
+                margin-bottom: 20px;
+            }
+
+            .btn {
+                margin-bottom: 15px;
+                width: 100%;
+                display: flex;
+                /* align-items: center; */
+                justify-content: center;
+
+                button {
+                    width: 95%;
+                    border-radius: 7px;
+                    padding: 10px 40px;
+                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    background-color: #3629a7;
+                }
+            }
+        }
+    }
+}
+
+
+/* Halaman Artikel end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Login Start */
+.containerLogin {
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 150px;
+    background-color: #F5F5F5;
+}
+
+.containerLogin .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.containerLogin .container h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #5238B8;
+    margin-bottom: 20px;
+}
+
+.containerLogin .container .login {
+    width: 50%;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #e4e4e7;
+}
+
+.containerLogin .container .login h2 {
+    font-size: 1.7rem;
+    color: #5441fa;
+}
+
+.containerLogin .container .login p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    color: #4a4b4c;
+    line-height: 25px;
+}
+
+.containerLogin .container .login form {
+    text-align: left;
+    margin: 30px 0;
+}
+
+.containerLogin .container .login form .form-group {
+    margin-bottom: 25px;
+}
+
+.containerLogin .container .login form .form-group label {
+    color: #4a4b4c;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.containerLogin .container .login form .form-group label span {
+    color: #CE231C;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.containerLogin .container .login form .form-group .form-control {
+    margin-top: 8px;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    /* padding: 20px 0; */
+}
+
+
+.containerLogin .container .login form .form-group .form-control input {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #e4e4e7;
+    font-size: 1rem;
+    color: #4e4e4e;
+    letter-spacing: .7px;
+    font-weight: 500;
+}
+
+
+.containerLogin .container .login form .form-group .form-control input:focus+.icon {
+    border-top: 2px solid #0175F4;
+    border-bottom: 2px solid #0175F4;
+    border-right: 2px solid #0175F4;
+}
+
+.containerLogin .container .login form .form-group .form-control input:focus {
+    border: 2px solid #0175F4;
+    outline: none;
+}
+
+.containerLogin .container .login form .form-group .form-control .icon {
+    width: 10%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    color: #4a4b4c;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 2px solid #e4e4e7;
+    border-bottom: 2px solid #e4e4e7;
+    border-right: 2px solid #e4e4e7;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateY(10px);
+}
+
+
+
+.containerLogin .container .login form .form-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-weight: 500;
+    /* background-color: red; */
+}
+
+.containerLogin .container .login form .form-info .ingatSaya input {
+    width: 15px;
+    height: 15px;
+    /* transform: translateY(2px); */
+    border: 1px solid #e4e4e7;
+}
+
+.containerLogin .container .login form .form-info .ingatSaya label {
+    margin-left: 5px;
+    font-size: 1rem;
+    color: #3f3f3f;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.containerLogin .container .login form .form-info a {
+    font-size: 1rem;
+}
+
+.containerLogin .container .login form button:hover {
+    opacity: .9;
+}
+
+.containerLogin .container .login form button {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #0175F4;
+}
+
+
+
+.containerLogin .container .login form .syaratDaftar {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.containerLogin .container .login form .syaratDaftar .syaratKetentuan,
+.containerLogin .container .login form .syaratDaftar .newsLetter {
+    margin: 10px 0;
+}
+
+.containerLogin .container .login form .syaratDaftar .syaratKetentuan label,
+.containerLogin .container .login form .syaratDaftar .newsLetter label {
+    color: #3f3f3f;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    line-height: 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.containerLogin .container .login .BelumPunyaAkun {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+
+.containerLogin .container .login form .form-info a,
+.containerLogin .container .login form .syaratDaftar .syaratKetentuan a,
+.containerLogin .container .login .BelumPunyaAkun a {
+    color: #0175F4;
+}
+
+
+
+
+
+
+
+/* Login End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2219,6 +2702,22 @@ form {
         }
     }
 
+    .provinsi {
+
+        .container {
+            flex-wrap: wrap;
+
+            .perProvinsi {
+                height: 350px;
+                // width: calc(90%/4);
+
+                img {
+                    height: 220px;
+                }
+            }
+        }
+    }
+
 }
 
 @media(max-width:1000px) {
@@ -2324,6 +2823,13 @@ form {
             img {
                 // width: 40%;
             }
+        }
+    }
+
+    .dataKelas {
+
+        h2 {
+            text-align: center;
         }
     }
 
@@ -2612,7 +3118,35 @@ form {
         }
     }
 
+    .provinsi {
 
+        .container {
+
+            .perProvinsi {
+                height: 350px;
+                width: calc(90%/2);
+
+                img {
+                    height: 250px;
+                }
+            }
+        }
+    }
+
+
+    .destinasiHero {
+        height: 100%;
+        padding-top: 10vh;
+
+        .container {
+
+            .hero-img {
+                width: 100%;
+                height: 50vh;
+                display: block;
+            }
+        }
+    }
 }
 
 
@@ -2802,13 +3336,6 @@ form {
 
 
 
-    .dataKelas {
-
-        h2 {
-            text-align: center;
-        }
-    }
-
 
 
 
@@ -2868,6 +3395,7 @@ form {
             }
         }
     }
+
 }
 
 
@@ -3159,6 +3687,23 @@ form {
 
 
 
+    .provinsi {
+
+        .container {
+
+            .perProvinsi {
+                width: 80%;
+                height: 100%;
+                margin-bottom: 25px;
+
+                img {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+
 }
 
 
@@ -3335,6 +3880,16 @@ form {
         }
     }
 
+
+    .provinsi {
+
+        .container {
+
+            .perProvinsi {
+                width: 100%;
+            }
+        }
+    }
 
 }
 
@@ -3608,6 +4163,33 @@ form {
 
 
 
+    .provinsi {
+
+        .container {
+
+            .perProvinsi {
+
+                img {
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+
+
+    .destinasiHero {
+
+        .container {
+
+            .hero-img {
+                height: 40vh;
+            }
+        }
+    }
+
+
+
 
 }
 
@@ -3646,6 +4228,18 @@ form {
                     padding-left: 10px;
                     font-size: .8rem;
                 }
+            }
+        }
+    }
+
+
+
+    .destinasiHero {
+
+        .container {
+
+            .hero-img {
+                height: 30vh;
             }
         }
     }
