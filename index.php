@@ -20,64 +20,8 @@
 
 <body>
 
-    <header class="bg-white">
-        <div class="container">
-
-            <div class="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <a href="index.html" class="logo">
-                <h1>Bhin<span>neka</span></h1>
-            </a>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="destinasi.html">Destinasi</a></li>
-                    <li><a href="artikel.html">Artikel</a></li>
-                    <li><a href="kontak.html">Kontak</a></li>
-                </ul>
-            </nav>
-
-
-            <div class="auth">
-                <a href="masuk.html">Masuk</a>
-                <a href="daftar.html">Daftar</a>
-            </div>
-
-        </div>
-    </header>
-
-
-
-
-    <nav class="navMobile">
-        <ul>
-            <div class="control">
-
-                <div class="menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <h1>Code<span>Pee</span></h1>
-            </div>
-
-            <li><a href="index.html">Home</a></li>
-            <li><a href="destinasi.html">Destinasi</a></li>
-            <li><a href="artikel.html">Artikel</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-
-            <div class="auth">
-                <a href="">Masuk</a>
-                <a href="">Daftar</a>
-            </div>
-        </ul>
-    </nav>
+    
+    <?php require "layout/navbar.php" ?>
 
 
     <section class="heroHome pt-100">
@@ -196,7 +140,7 @@
                         dolor similique reiciendis voluptatum repudiandae nesciunt!</p>
 
                     <div class="btn">
-                        <a href="detailKelas.html" class="selengkapnya">Selengkapnya</a>
+                        <a href="detailDestinasi.html" class="selengkapnya">Selengkapnya</a>
                     </div>
                 </div>
 
@@ -208,7 +152,7 @@
                         dolor similique reiciendis voluptatum repudiandae nesciunt!</p>
 
                     <div class="btn">
-                        <a href="detailKelas.html" class="selengkapnya">Selengkapnya</a>
+                        <a href="detailDestinasi.html" class="selengkapnya">Selengkapnya</a>
                     </div>
                 </div>
 
@@ -220,7 +164,7 @@
                         dolor similique reiciendis voluptatum repudiandae nesciunt!</p>
 
                     <div class="btn">
-                        <a href="detailKelas.html" class="selengkapnya">Selengkapnya</a>
+                        <a href="detailDestinasi.html" class="selengkapnya">Selengkapnya</a>
                     </div>
                 </div>
 
@@ -228,33 +172,6 @@
 
         </div>
     </section>
-
-    <!-- <section class="provinsi pt-50 pb-100">
-        <div class="container">
-
-            <a href="detailProvinsi.html" class="perProvinsi">
-                <img src="img/provinsi/provinsi.jpg" alt="provinsi">
-                <h3>Bali</h3>
-            </a>
-
-            <a href="detailProvinsi.html" class="perProvinsi">
-                <img src="img/provinsi/provinsi.jpg" alt="provinsi">
-                <h3>kalimantan selatan</h3>
-            </a>
-
-            <a href="detailProvinsi.html" class="perProvinsi">
-                <img src="img/provinsi/provinsi.jpg" alt="provinsi">
-                <h3>Bali</h3>
-            </a>
-
-            <a href="detailProvinsi.html" class="perProvinsi">
-                <img src="img/provinsi/provinsi.jpg" alt="provinsi">
-                <h3>Bali</h3>
-            </a>
-        </div>
-    </section> -->
-
-
 
 
 
@@ -317,79 +234,7 @@
 
 
 
-
-    <!-- footer start -->
-    <section class="footer" id="footer">
-        <div class="container">
-            <div class="box">
-                <h2>About Us</h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum nisi dolorem reprehenderit? Eos
-                    quas
-                    perferendis velit porro nemo tempora ab!
-                </p>
-
-                <div class="sosmed">
-                    <a href="instagram.com/george_ikki">
-                        <div class="perSosmed">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                    </a>
-
-
-                    <a href="github.com/Ikki Rama">
-                        <div class="perSosmed">
-                            <i class="fab fa-youtube"></i>
-                        </div>
-                    </a>
-
-                    <a href="linkedin.com/in/rifki-romadhan-purbalingga">
-                        <div class="perSosmed">
-                            <i class="fab fa-linkedin-in"></i>
-                        </div>
-                    </a>
-
-                    <a href="github.com/IkkiRama">
-                        <div class="perSosmed">
-                            <i class="fab fa-github"></i>
-                        </div>
-                    </a>
-
-                </div>
-
-
-            </div>
-
-            <div class="box">
-                <h2>Provinsi</h2>
-                <a href="index.html">Bali</a>
-                <a href="index.html">Jakarta</a>
-                <a href="index.html">Jawa Barat</a>
-                <a href="index.html">Jawa Tengah</a>
-                <a href="index.html">Sumatra Utara</a>
-                <a href="index.html">Kalimantan Selatan</a>
-            </div>
-
-
-            <div class="box">
-                <h2>Quick Link</h2>
-                <a href="artikel.html">Artikel</a>
-                <a href="kontak.html">Kontak</a>
-                <a href="destinasi.html">Destinasi</a>
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <footer>
-        <div class="container">
-            <hr>
-            <p>&copy; 2021. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- footer end -->
+    <?php require "layout/footer.php" ?>
 
 
     <script src="js/script.js"></script>

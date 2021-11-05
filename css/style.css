@@ -79,6 +79,10 @@ label {
   padding-top: 50px;
 }
 
+.mt-25 {
+  margin-top: 25px;
+}
+
 .pb-50 {
   padding-bottom: 50px;
 }
@@ -1090,6 +1094,35 @@ footer hr {
   background-color: #EFF2F6;
 }
 
+.detailKelas .container .tentangKelas .perTentangKelas .komentar .perKomentar {
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.detailKelas .container .tentangKelas .perTentangKelas .komentar .perKomentar .orang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.detailKelas .container .tentangKelas .perTentangKelas .komentar .perKomentar .orang img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.detailKelas .container .tentangKelas .perTentangKelas .komentar .perKomentar .isiKomentar {
+  font-weight: 400;
+}
+
 .detailKelas .container .infoKelas {
   width: 30%;
   position: -webkit-sticky;
@@ -1275,7 +1308,6 @@ footer hr {
 
 .profil .container .profil-orang .detail-orang .tentangSaya {
   margin-top: 20px;
-  text-align: left;
 }
 
 .profil .container .profil-orang .detail-orang .tentangSaya p {
@@ -2018,6 +2050,11 @@ form button {
             transform: translateX(0);
     width: 100%;
   }
+  /* Login */
+  .containerLogin .container .login {
+    width: 60%;
+  }
+  /* Login */
 }
 
 @media (max-width: 900px) {
@@ -2116,9 +2153,6 @@ form button {
   .profil .container .profil-kelas {
     width: 100%;
   }
-  .profil .container .profil-orang .detail-orang .tentangSaya {
-    text-align: center;
-  }
   .profil .container .profil-kelas {
     margin-top: 20px;
     margin-left: 0;
@@ -2165,8 +2199,8 @@ form button {
     margin-bottom: 20px;
   }
   .detailKelas .container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
   }
   .detailKelas .container .tentangKelas {
     width: 100%;
@@ -2177,6 +2211,7 @@ form button {
   }
   .detailKelas .container .infoKelas {
     width: 100%;
+    position: static;
   }
   .provinsi .container .perProvinsi {
     height: 350px;
@@ -2193,6 +2228,13 @@ form button {
     width: 100%;
     height: 50vh;
     display: block;
+  }
+  /* Login */
+  .containerLogin .container .login {
+    width: 80%;
+  }
+  .containerLogin .container h1 {
+    font-size: 2.5rem;
   }
 }
 
@@ -2304,6 +2346,14 @@ form button {
   .heroDetailKelas .container img {
     width: 100%;
   }
+  /* Login */
+  .containerLogin .container .login {
+    width: 100%;
+  }
+  .containerLogin .container h1 {
+    font-size: 2rem;
+  }
+  /* Login */
 }
 
 @media (max-width: 600px) {
@@ -2428,6 +2478,18 @@ form button {
   .provinsi .container .perProvinsi img {
     margin-bottom: 10px;
   }
+  /* Login */
+  .containerLogin .container h1 {
+    font-size: 1.5rem;
+  }
+  .containerLogin .container .login h2 {
+    font-size: 1.3rem;
+  }
+  .containerLogin .container .login p {
+    font-size: 1rem;
+    line-height: 22px;
+  }
+  /* Login */
 }
 
 @media (max-width: 400px) {
@@ -2496,6 +2558,12 @@ form button {
   }
   .provinsi .container .perProvinsi {
     width: 100%;
+  }
+  .detailKelas .container .tentangKelas .perTentangKelas .komentar .perKomentar .orang img {
+    margin-right: 10px;
+  }
+  .detailKelas .container .tentangKelas .perTentangKelas .komentar .perKomentar .orang .caption p {
+    font-size: .9rem;
   }
 }
 
@@ -2628,6 +2696,12 @@ form button {
   .destinasiHero .container .hero-img {
     height: 40vh;
   }
+  /* Login */
+  .containerLogin .container .login form .form-info label,
+  .containerLogin .container .login form .form-info a {
+    font-size: .9rem;
+  }
+  /* Login */
 }
 
 @media (max-width: 300px) {
@@ -2650,6 +2724,15 @@ form button {
   }
   .destinasiHero .container .hero-img {
     height: 30vh;
+  }
+  .detailKelas .container .tentangKelas .perTentangKelas .komentar .perKomentar .orang img {
+    margin-right: 7px;
+  }
+  .detailKelas .container .tentangKelas .perTentangKelas .komentar .perKomentar .orang .caption h3 {
+    font-size: 1rem;
+  }
+  .detailKelas .container .tentangKelas .perTentangKelas .komentar .perKomentar .orang .caption p {
+    font-size: .9rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

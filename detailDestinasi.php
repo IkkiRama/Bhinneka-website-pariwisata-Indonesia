@@ -19,64 +19,7 @@
 
 <body>
 
-    <header class="bg-white">
-        <div class="container">
-
-            <a href="index.html" class="logo">
-                <h1>Code<span>Pee</span></h1>
-            </a>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="kelas.html">Kelas</a></li>
-                    <li><a href="webinar.html">Webinar</a></li>
-                    <li><a href="kontak.html">Kontak</a></li>
-                </ul>
-            </nav>
-
-
-            <div class="auth">
-                <a href="masuk.html" class="masuk">Masuk</a>
-                <a href="daftar.html" class="daftar">Daftar</a>
-            </div>
-
-
-            <div class="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-
-
-
-    <nav class="navMobile">
-        <ul>
-            <div class="control">
-
-                <div class="menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-                <h1>Code<span>Pee</span></h1>
-            </div>
-
-            <li><a href="index.html">Home</a></li>
-            <li><a href="kelas.html">Kelas</a></li>
-            <li><a href="webinar.html">Webinar</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-
-            <div class="auth">
-                <a href="">Masuk</a>
-                <a href="">Daftar</a>
-            </div>
-        </ul>
-    </nav>
-
+    <?php require "layout/navbar.php" ?>
 
 
     <!-- 30 rem -->
@@ -174,6 +117,65 @@
                 </div>
 
 
+                <div class="perTentangKelas">
+                    <h2>Komentar</h2>
+
+                    <p>Kamu dapat mengikuti kelas ini tanpa latar belakang IT sebelumnya. Kelas ini didesain untuk
+                        Pemula.</p>
+
+                    <form action="" class="mt-25">
+
+                        <div class="form-group">
+                            <label for="">Komentar</label>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <button>Kirim</button>
+                    </form>
+
+
+
+                    <div class="komentar pt-50">
+                        <div class="perKomentar">
+                            <div class="orang">
+                                <img src="img/people/orang1.svg" alt="orang">
+                                <div class="caption">
+                                    <h3>Rifkimak anjay</h3>
+                                    <p>Diposting pada 12-11-04</p>
+                                </div>
+                            </div>
+
+                            <p class="isiKomentar">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cupiditate nihil ipsam
+                                consectetur explicabo quam, illum sunt tenetur fugit in harum corrupti a dolores velit
+                                nulla commodi quidem ducimus distinctio.
+                            </p>
+                        </div>
+
+
+                        <div class="perKomentar">
+                            <div class="orang">
+                                <img src="img/people/orang1.svg" alt="orang">
+                                <div class="caption">
+                                    <h3>Rifkimak anjay</h3>
+                                    <p>Diposting pada 12-11-04</p>
+                                </div>
+                            </div>
+
+                            <p class="isiKomentar">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cupiditate nihil ipsam
+                                consectetur explicabo quam, illum sunt tenetur fugit in harum corrupti a dolores velit
+                                nulla commodi quidem ducimus distinctio.
+                            </p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
 
 
             </div>
@@ -225,78 +227,7 @@
 
 
 
-
-    <!-- footer start -->
-    <section class="footer" id="footer">
-        <div class="container">
-            <div class="box">
-                <h2>About Us</h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum nisi dolorem reprehenderit? Eos
-                    quas
-                    perferendis velit porro nemo tempora ab!
-                </p>
-                <div class="sosmed">
-                    <a href="instagram.com/george_ikki">
-                        <div class="perSosmed">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                    </a>
-
-
-                    <a href="github.com/Ikki Rama">
-                        <div class="perSosmed">
-                            <i class="fab fa-youtube"></i>
-                        </div>
-                    </a>
-
-                    <a href="linkedin.com/in/rifki-romadhan-purbalingga">
-                        <div class="perSosmed">
-                            <i class="fab fa-linkedin-in"></i>
-                        </div>
-                    </a>
-
-                    <a href="github.com/IkkiRama">
-                        <div class="perSosmed">
-                            <i class="fab fa-github"></i>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-
-            <div class="box">
-                <h2>Product</h2>
-                <a href="index.html">Lomba</a>
-                <a href="index.html">Webinar</a>
-                <a href="index.html">Beasiswa</a>
-                <a href="index.html">Volunteer</a>
-                <a href="index.html">Exchange</a>
-                <a href="index.html">Conference</a>
-            </div>
-
-
-            <div class="box">
-                <h2>Quick Link</h2>
-                <a href="index.html">Home</a>
-                <a href="login.html">Login</a>
-                <a href="event.html">Event</a>
-                <a href="artikel.html">Artikel</a>
-                <a href="mediaPartner.html">Media Partner</a>
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <footer>
-        <div class="container">
-            <hr>
-            <p>&copy; 2021. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <!-- footer end -->
+    <?php require "layout/footer.php" ?>
 
 
 
