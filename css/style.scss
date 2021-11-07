@@ -21,18 +21,6 @@
     scroll-behavior: smooth;
 }
 
-@keyframes fadeup {
-    from {
-        transform: translateY(2.5rem);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
 body {
     overflow-x: hidden;
     background-color: #F6F8FD;
@@ -396,7 +384,7 @@ header {
 
         .caption {
             width: 55%;
-            // flex: 1;
+            // flex: 1; 
 
             h1 {
                 font-size: 3.1rem;
@@ -509,6 +497,8 @@ header {
         border-radius: .5rem;
         background-color: #fff;
         border: 2px solid #e4e4e7;
+        position: relative;
+        height: 650px;
 
         .deskripsiSingkat {
             margin-top: 20px;
@@ -535,9 +525,12 @@ header {
         }
 
         .btn {
+            width: 100%;
             display: flex;
             justify-content: center;
             margin: 15px 0;
+            position: absolute;
+            bottom: 0;
 
             .selengkapnya {
                 width: 90%;
@@ -2080,6 +2073,9 @@ form {
 
         .perArtikel {
             width: calc(90%/3);
+            height: 550px;
+            max-height: 100%;
+            position: relative;
             margin: 15px 10px;
             /* padding: 20px; */
             border-radius: 10px;
@@ -2117,6 +2113,8 @@ form {
                 display: flex;
                 /* align-items: center; */
                 justify-content: center;
+                position: absolute;
+                bottom: 0;
 
                 button {
                     width: 95%;
@@ -2618,6 +2616,7 @@ form {
 
         .perKelas {
             width: calc(90%/2);
+            height: 600px;
 
             .deskripsiSingkat {
                 font-size: .9rem;
@@ -2911,6 +2910,20 @@ form {
     /* Login */
 
 
+    .rekomendasiArtikel .container .perArtikel,
+    .artikel .container .perArtikel {
+        width: calc(90%/2);
+        height: 600px;
+    }
+
+    .rekomendasiArtikel .container .perArtikel img,
+    .artikel .container .perArtikel img {
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+
+
 }
 
 
@@ -3187,6 +3200,19 @@ form {
         font-size: 2.5rem;
     }
 
+
+
+    /* Halaman Artikel  start */
+    .rekomendasiArtikel .container .perArtikel img,
+    .artikel .container .perArtikel img {
+        height: 220px;
+    }
+
+    /* Halaman Artikel  end */
+
+
+
+
 }
 
 
@@ -3310,6 +3336,11 @@ form {
         .perKelas {
             width: 80%;
             margin: 10px 5px;
+            height: 100%;
+
+            .btn {
+                position: relative;
+            }
         }
     }
 
@@ -3450,6 +3481,26 @@ form {
     /* Login */
 
 
+
+
+    .rekomendasiArtikel .container .perArtikel,
+    .artikel .container .perArtikel {
+        width: 80%;
+        margin: 0;
+        margin-top: 30px;
+        height: 100%;
+    }
+
+
+    .rekomendasiArtikel .container .perArtikel .btn {
+        position: relative;
+    }
+
+    .rekomendasiArtikel .container .perArtikel img,
+    .artikel .container .perArtikel img {
+        height: 300px;
+    }
+
 }
 
 
@@ -3551,6 +3602,13 @@ form {
                 margin-bottom: 0;
             }
         }
+    }
+
+
+
+    .rekomendasiArtikel .container .perArtikel,
+    .artikel .container .perArtikel {
+        width: 90%;
     }
 
 
@@ -3777,6 +3835,15 @@ form {
 
     /* Login */
 
+    .rekomendasiArtikel .container .perArtikel,
+    .artikel .container .perArtikel {
+        width: 100%;
+    }
+
+    .rekomendasiArtikel .container .perArtikel img,
+    .artikel .container .perArtikel img {
+        height: 250px;
+    }
 
 
 
@@ -4291,6 +4358,22 @@ form {
 
     /* Login */
 
+    .rekomendasiArtikel .container .perArtikel h2,
+    .artikel .container .perArtikel h2 {
+        font-size: 1.2rem;
+    }
+
+    .rekomendasiArtikel .container .perArtikel p,
+    .artikel .container .perArtikel p {
+        font-size: .9rem;
+    }
+
+    .rekomendasiArtikel .container .perArtikel .btn button,
+    .artikel .container .perArtikel .btn button {
+        font-size: .8rem;
+        padding: 8px 0;
+    }
+
 
 }
 
@@ -4363,5 +4446,15 @@ form {
                 font-size: .9rem;
             }
         }
+    }
+
+    .rekomendasiArtikel .container .perArtikel p,
+    .artikel .container .perArtikel p {
+        font-size: .8rem;
+    }
+
+    .rekomendasiArtikel .container .perArtikel img,
+    .artikel .container .perArtikel img {
+        height: 150px;
     }
 }

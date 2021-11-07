@@ -1,4 +1,3 @@
-
     <header class="bg-white">
         <div class="container">
 
@@ -22,10 +21,14 @@
             </nav>
 
 
+            <?php if (isset($_SESSION['pelanggan'])){ ?>
+                <a href="profil.php?id=<?php echo $_SESSION['pelanggan']['id_user'] ?>"><img src="fotoUser/<?php echo $_SESSION['pelanggan']['foto_user'] ?>" class="fotoUserLogin"></a>
+            <?php }else{ ?>
             <div class="auth">
                 <a href="masuk.php">Masuk</a>
                 <a href="daftar.php">Daftar</a>
             </div>
+            <?php } ?>
 
         </div>
     </header>

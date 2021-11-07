@@ -11,7 +11,7 @@
     <?php
 
         $data = [];
-        $ambil = $conn->query("SELECT * FROM provinsi");
+        $ambil = $conn->query("SELECT * FROM provinsi ORDER BY RAND()");
         while($pecah = $ambil->fetch_assoc()){
             $data[] = $pecah;
         }

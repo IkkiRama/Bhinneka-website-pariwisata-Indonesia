@@ -9,6 +9,11 @@
     $ambil = $conn->query("SELECT * FROM artikel WHERE id_artikel = '$id' ");
     $pecah = $ambil->fetch_assoc();
 
+    $data = [];
+    $ambilArtikel = $conn->query("SELECT * FROM artikel ORDER BY RAND() ");
+    while($pecahArtikel = $ambilArtikel->fetch_assoc()){
+        $data[] = $pecahArtikel;
+    }
 
 
     ?>
@@ -42,50 +47,18 @@
         <div class="container">
             <h2 class="title">Rekomendasi Artikel</h2>
 
-            <a href="perArtikel.html" class="perArtikel">
-                <img src="img/provinsi/provinsi.jpg" alt="perArtikel img">
-                <h2>40+ Cara Mendapatkan Uang dari Internet [Terbaru]</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quasi dignissimos amet aliquam
-                    eligendi doloremque vel assumenda voluptate. Asperiores optio, quod hic molestias illo voluptatem et
-                    exercitationem aut impedit explicabo.
-                </p>
+
+            <?php foreach ($data as $key => $value) { ?>
+            <a href="perArtikel.php?id=<?php echo $value['id_artikel'] ?>" class="perArtikel">
+                <img src="fotoArtikel/<?php echo $value['foto_artikel'] ?>" alt="perArtikel img">
+                <h2><?php echo $value['title_artikel'] ?></h2>
+                <p><?php echo $value['slug_konten'] ?></p>
 
                 <div class="btn">
                     <button>Baca Selengkapnya</button>
                 </div>
             </a>
-
-
-            <a href="perArtikel.html" class="perArtikel">
-                <img src="img/provinsi/provinsi.jpg" alt="perArtikel img">
-                <h2>40+ Cara Mendapatkan Uang dari Internet [Terbaru]</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quasi dignissimos amet aliquam
-                    eligendi doloremque vel assumenda voluptate. Asperiores optio, quod hic molestias illo voluptatem et
-                    exercitationem aut impedit explicabo.
-                </p>
-
-                <div class="btn">
-                    <button>Baca Selengkapnya</button>
-                </div>
-            </a>
-
-
-
-            <a href="perArtikel.html" class="perArtikel">
-                <img src="img/provinsi/provinsi.jpg" alt="perArtikel img">
-                <h2>40+ Cara Mendapatkan Uang dari Internet [Terbaru]</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quasi dignissimos amet aliquam
-                    eligendi doloremque vel assumenda voluptate. Asperiores optio, quod hic molestias illo voluptatem et
-                    exercitationem aut impedit explicabo.
-                </p>
-
-                <div class="btn">
-                    <button>Baca Selengkapnya</button>
-                </div>
-            </a>
+            <?php } ?>
 
 
         </div>

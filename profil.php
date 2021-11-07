@@ -8,6 +8,27 @@
 
 <body>
 
+    <?php
+    $id = $_GET['id'];
+
+    if (empty($_SESSION['pelanggan'])) {
+        echo"<script>
+            alert('Anda harus login')
+            location = 'masuk.php'
+        </script>";
+    }
+
+    if ($id !== $_SESSION['pelanggan']['id_user']) {
+            echo"<script>
+                alert('Jangan nakal')
+                location = 'profil.php?id=".$_SESSION['pelanggan']['id_user']."'
+            </script>";
+    }
+
+
+
+    ?>
+
     <?php require "layout/navbar.php" ?>
 
 
@@ -24,17 +45,10 @@
                 </a>
 
                 <div class="detail-orang">
-                    <img src="img/people/img1.jpg" alt="img orang">
-                    <h2>Rifki Romadhan</h2>
-                    <p class="email">georgeikkirama@gmail.com</p>
-
-
-                    <div class="tentangSaya">
-                        <h3>Tentang Saya</h3>
-                        <p>Hanya siswa SMKN 2 Purbalingga biasa yang suka ngoding web</p>
-                    </div>
-
-                    <a href="" class="selengkapnya">Logout</a>
+                    <img src="fotoUser/<?php echo $_SESSION['pelanggan']['foto_user'] ?>" alt="img orang" style="background-color: #fff;">
+                    <h2><?php echo $_SESSION['pelanggan']['nama_user'] ?></h2>
+                    <p class="email"><?php echo $_SESSION['pelanggan']['email_user'] ?></p>
+                    <a href="logout.php" class="selengkapnya">Logout</a>
 
                 </div>
             </div>
