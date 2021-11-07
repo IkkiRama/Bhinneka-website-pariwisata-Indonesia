@@ -1,24 +1,25 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="">
-    <meta name="description" content="anjay">
+    <?php require "layout/header.php" ?>
     <title>Masuk | Bhinneka</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <script src="fontawesome/js/all.min.js"></script>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon.png">
 </head>
 
 <body>
+
+    <?php
+
+        if (isset($_SESSION['pelanggan'])) {
+            echo"<script>
+                    alert('anda sudah login')
+                    location = 'index.php'
+                </script>";
+        }
+
+    ?>
 
 
     <?php require "layout/navbar.php" ?>
@@ -32,12 +33,12 @@
                 <h2>Masuk sebagai pelanggan</h2>
                 <p>Sudah punya akun TasBee? Yuk masuk untuk mengakses beragam fitur TasBee</p>
 
-                <form action="">
+                <form method="post">
                     <div class="form-group">
                         <label for="email">Alamat Email <span>*</span> </label>
 
                         <div class="form-control">
-                            <input type="email" id="email" autocomplete required>
+                            <input type="email" id="email" name="email" autocomplete >
                             <div class="icon">
                                 <i class="fas fa-at"></i>
                             </div>
@@ -50,7 +51,7 @@
                         <label for="password">Password <span>*</span> </label>
 
                         <div class="form-control">
-                            <input type="password" id="password" autocomplete required>
+                            <input type="password" name="password" id="password" autocomplete>
 
                             <div class="icon">
                                 <i class="fas fa-eye-slash"></i>
@@ -66,14 +67,14 @@
                             <label for="ingatSaya">Ingat Saya</label>
                         </div>
 
-                        <a href="register.html">Lupa Password?</a>
+                        <a href="register.php">Lupa Password?</a>
                     </div>
 
-                    <button type="submit" class="masuk">Masuk</button>
+                    <button type="submit" name="masuk" class="masuk">Masuk</button>
 
                 </form>
 
-                <p class="BelumPunyaAkun">Belum punya akun? <a href="daftar.html">Daftar di sini</a></p>
+                <p class="BelumPunyaAkun">Belum punya akun? <a href="daftar.php">Daftar di sini</a></p>
 
 
             </div>
@@ -90,3 +91,50 @@
 </body>
 
 </html>
+
+
+
+
+<?php
+
+
+if (isset($_POST["masuk"])) {
+
+    $email = htmlspecialchars($_POST['email']);
+    $password = htmlspecialchars($_POST['password']);
+
+
+
+
+
+
+    if (empty($email)|| empty($password)) {
+        echo"<script>
+            alert('harap isi semua formulir')
+            location = 'masuk.php'
+        </script>";
+    }
+
+    $data = [];
+    $ambil = $conn->query("SELECT * FROM user WHERE email_user = '$email' ");
+    $yangCocok = $ambil->num_rows;
+    $pecah = $ambil->fetch_assoc();
+
+    if ($yangCocok === 1) {
+        if (password_verify($password, $pecah['password_user'])) {
+            $_SESSION['pelanggan'] = $pecah;
+            echo"<script>
+                alert('anda berhasil login')
+                location = 'index.php'
+            </script>";
+        }
+    }
+
+
+
+}
+
+
+?>
+
+

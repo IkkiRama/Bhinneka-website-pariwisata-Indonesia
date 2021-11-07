@@ -1,3 +1,14 @@
+<?php require"koneksi.php";?>
+<?php
+
+if (empty($_SESSION['admin'])) {
+		echo"<script>
+		alert('Anda harus login')
+		location = 'masuk.php'
+	</script>";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +19,10 @@
 <body>
 	<h1>Dashboard Bhinneka</h1>
 	<?php require "layout/navbar.php" ?>
-
+	
+	<pre>
+		<?php print_r($_SESSION['admin']) ?>
+	</pre>
 
 
 </body>

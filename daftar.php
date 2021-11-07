@@ -2,20 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="">
-    <meta name="description" content="anjay">
-    <title>Masuk | Bhinneka</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <script src="fontawesome/js/all.min.js"></script>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon.png">
+    <?php require "layout/header.php" ?>
+    <title>Daftar | Bhinneka</title>
 </head>
 
 <body>
@@ -34,13 +22,13 @@
                 <h2>Daftar sebagai pelanggan</h2>
                 <p>Sebelum memulai perjalananmu, yuk cerita tentang dirimu</p>
 
-                <form action="">
+                <form method="post">
 
                     <div class="form-group">
                         <label for="namaDepan">Nama Depan <span>*</span> </label>
 
                         <div class="form-control">
-                            <input type="text" id="namaDepan" autocomplete required>
+                            <input type="text" id="namaDepan" name="namaDepan" autocomplete required>
                             <div class="icon">
                                 <i class="fas fa-user"></i>
                             </div>
@@ -52,7 +40,7 @@
                         <label for="namaBelakang">Nama Belakang <span>*</span> </label>
 
                         <div class="form-control">
-                            <input type="text" id="namaBelakang" autocomplete>
+                            <input type="text" id="namaBelakang" name="namaBelakang" autocomplete>
                             <div class="icon">
                                 <i class="fas fa-user"></i>
                             </div>
@@ -64,7 +52,7 @@
                         <label for="email">Alamat Email <span>*</span> </label>
 
                         <div class="form-control">
-                            <input type="email" id="email" autocomplete required>
+                            <input type="email" id="email" name="email" autocomplete required>
                             <div class="icon">
                                 <i class="fas fa-at"></i>
                             </div>
@@ -74,10 +62,10 @@
 
 
                     <div class="form-group">
-                        <label for="password">Password <span>*</span> </label>
+                        <label for="password1">Password <span>*</span> </label>
 
                         <div class="form-control">
-                            <input type="password" id="password" autocomplete required>
+                            <input type="password" id="password1" name="password1" autocomplete required>
 
                             <div class="icon">
                                 <i class="fas fa-eye-slash"></i>
@@ -90,7 +78,7 @@
                         <label for="password2">Konfirmasi Password <span>*</span> </label>
 
                         <div class="form-control">
-                            <input type="password" id="password2" autocomplete required>
+                            <input type="password" id="password2" name="password2" autocomplete required>
 
                             <div class="icon">
                                 <i class="fas fa-eye-slash"></i>
@@ -120,7 +108,7 @@
 
                     </div>
 
-                    <button class="daftarPelanggan">Daftar</button>
+                    <button class="daftarPelanggan" name="daftar" type="submit">Daftar</button>
 
                 </form>
 
@@ -140,3 +128,57 @@
 </body>
 
 </html>
+
+<?php
+
+
+if (isset($_POST['daftar'])) {
+    $namaDepan = htmlspecialchars($_POST['namaDepan']);
+    $namaBelakang = htmlspecialchars($_POST['namaBelakang']);
+    $email = htmlspecialchars($_POST['email']);
+    $password1 = htmlspecialchars($_POST['password1']);
+    $password2 = htmlspecialchars($_POST['password2']);
+    $namaLengkap = $namaDepan .' '.$namaBelakang;
+
+
+    $ambil = $conn->query("SELECT * FROM user WHERE email_user = '$email' ");
+    $yangCocok = $ambil->num_rows;
+
+
+    if ($yangCocok === 1) {
+        echo"<script>
+            alert('email sudah digunakan')
+            location = 'daftar.php'
+        </script>";
+    }
+
+
+    if (empty($namaDepan)|| empty($email)|| empty($password1)|| empty($password2)) {
+        echo"<script>
+            alert('harap isi semua formulir')
+            location = 'daftar.php'
+        </script>";
+    }
+
+    if ($password1 !== $password2) {
+        echo"<script>
+            alert('password tidak sama')
+            location = 'daftar.php'
+        </script>";
+    }
+
+    $passwordBaru = password_hash($password1, PASSWORD_DEFAULT);
+
+
+    $conn->query("INSERT INTO user VALUES(null, 'pelanggan', '$namaLengkap', '$email', 'user.svg', '$passwordBaru')");
+
+
+    echo"<script>
+            alert('anda berhasil membuat akun, silahkan login')
+            location = 'masuk.php'
+        </script>";
+
+}
+
+
+?>

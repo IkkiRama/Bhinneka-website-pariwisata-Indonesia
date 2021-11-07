@@ -2,24 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="">
-    <meta name="description" content="anjay">
-    <title>HTML Dasar | CodePee</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon.png">
+    <?php require "layout/header.php" ?>
+    <?php
+
+
+    $id = $_GET['id'];
+    $ambil = $conn->query("SELECT * FROM provinsi WHERE id_provinsi = '$id' ");
+    $pecah = $ambil->fetch_assoc();
+
+    ?>
+    <title><?php echo $pecah['nama_provinsi'] ?> | CodePee</title>
 </head>
 
 <body>
 
     <?php require "layout/navbar.php" ?>
+    <?php
+
+    $dataPenginapan = [];
+    $dataTempatMakan = [];
+    $dataKomentar = [];
+    
+
+    $ambilPenginapan = $conn->query("SELECT * FROM penginapan WHERE id_provinsi = '$id' ");
+    while($pecahPenginapan = $ambilPenginapan->fetch_assoc()){
+        $dataPenginapan[] = $pecahPenginapan;
+    }
+
+
+    $ambilTempatMakan = $conn->query("SELECT * FROM tempatmakan WHERE id_provinsi = '$id' ");
+    while($pecahTempatMakan = $ambilTempatMakan->fetch_assoc()){
+        $dataTempatMakan[] = $pecahTempatMakan;
+    }
+
+
+    $ambilKomentar = $conn->query("SELECT * FROM komentar LEFT JOIN user ON komentar.nama_user = user.nama_user WHERE id_provinsi = '$id' ");
+    while($pecahKomentar = $ambilKomentar->fetch_assoc()){
+        $dataKomentar[] = $pecahKomentar;
+    }
+
+    ?>
 
 
     <!-- 30 rem -->
@@ -27,18 +49,13 @@
         <div class="container">
 
             <div class="caption">
-                <h1>HTML Dasar</h1>
+                <h1><?php echo $pecah['nama_provinsi'] ?></h1>
 
-                <p>
-                    Di kelas ini, kita akan belajar bagaimana membuat sebuah website dari awal dengan menggunakan HTML.
-                    Dengan HTML, kita bisa membuat struktur dan kerangka sebuah website yang terdiri dari beberapa
-                    element.
-                    HTML juga berfungsi sebagai penampil konten pada website kita.
-                </p>
+                <p><?php echo $pecah['deskripsi_singkat_provinsi'] ?></p>
             </div>
 
             <!-- <div class="img"></div> -->
-            <img src="img/kelas/Skilvul asset volume 2-03.jpg" alt="img kelas">
+            <img src="fotoProvinsi/<?php echo $pecah['foto_provinsi'] ?>" alt="img kelas">
         </div>
     </section>
 
@@ -52,13 +69,7 @@
 
                     <h2>Tentang</h2>
 
-                    <p>
-                        Di kelas ini, kita akan belajar bagaimana membuat sebuah website dari awal dengan menggunakan
-                        HTML.
-                        Dengan HTML, kita bisa membuat struktur dan kerangka sebuah website yang terdiri dari beberapa
-                        element.
-                        HTML juga berfungsi sebagai penampil konten pada website kita.
-                    </p>
+                    <p><?php echo htmlspecialchars_decode($pecah['deskripsi_lengkap']) ?></p>
 
                 </div>
 
@@ -68,13 +79,12 @@
                     <h2>Daftar Destinasi</h2>
 
                     <div class="materi">
-                        <p>Struktur Dokumen HTML</p>
-                        <p>HTML Tag, Element, Attribute & Comment</p>
-                        <p>HTML Tag Untuk Menampilkan Teks</p>
-                        <p>HTML Tag Untuk Multimedia</p>
-                        <p>HTML Tag Untuk Tabel</p>
-                        <p>HTML Tag Untuk Formulir</p>
-                        <p>HTML Tag Untuk Membagi Layout Website</p>
+                        <p>kontol</p>
+                        <p>kontol</p>
+                        <p>kontol</p>
+                        <p>kontol</p>
+                        <p>kontol</p>
+                        <p>kontol</p>
                     </div>
                 </div>
 
@@ -82,37 +92,27 @@
                 <div class="perTentangKelas">
                     <h2>Penginapan</h2>
 
-                    <p>Kamu dapat mengikuti kelas ini tanpa latar belakang IT sebelumnya. Kelas ini didesain untuk
-                        Pemula.</p>
+                    <p>Berikut beberapa rekomendasi penginapan yang bisa anda manfaatkan saat berlibur di <?php echo $pecah['nama_provinsi'] ?></p>
 
 
                     <div class="materi">
-                        <p>Struktur Dokumen HTML</p>
-                        <p>HTML Tag, Element, Attribute & Comment</p>
-                        <p>HTML Tag Untuk Menampilkan Teks</p>
-                        <p>HTML Tag Untuk Multimedia</p>
-                        <p>HTML Tag Untuk Tabel</p>
-                        <p>HTML Tag Untuk Formulir</p>
-                        <p>HTML Tag Untuk Membagi Layout Website</p>
+                       <?php foreach ($dataPenginapan as $key => $value): ?>
+                        <p><?php echo $value['nama_penginapan'] ?></p>
+                        <?php endforeach ?>
                     </div>
                 </div>
 
 
                 <div class="perTentangKelas">
-                    <h2>Restoran</h2>
+                    <h2>Tempat Makan</h2>
 
-                    <p>Kamu dapat mengikuti kelas ini tanpa latar belakang IT sebelumnya. Kelas ini didesain untuk
-                        Pemula.</p>
+                    <p>Berikut beberapa rekomendasi tempat makan yang bisa anda manfaatkan saat berlibur di <?php echo $pecah['nama_provinsi'] ?></p>
 
 
                     <div class="materi">
-                        <p>Struktur Dokumen HTML</p>
-                        <p>HTML Tag, Element, Attribute & Comment</p>
-                        <p>HTML Tag Untuk Menampilkan Teks</p>
-                        <p>HTML Tag Untuk Multimedia</p>
-                        <p>HTML Tag Untuk Tabel</p>
-                        <p>HTML Tag Untuk Formulir</p>
-                        <p>HTML Tag Untuk Membagi Layout Website</p>
+                        <?php foreach ($dataTempatMakan as $key => $value): ?>
+                        <p><?php echo $value['nama_tempat_makan'] ?></p>
+                        <?php endforeach ?>
                     </div>
                 </div>
 
@@ -120,55 +120,35 @@
                 <div class="perTentangKelas">
                     <h2>Komentar</h2>
 
-                    <p>Kamu dapat mengikuti kelas ini tanpa latar belakang IT sebelumnya. Kelas ini didesain untuk
-                        Pemula.</p>
+                    <p>Silahkan berikan pendapat anda tentang destinasi wisata yang ada di <?php echo $pecah['nama_provinsi'] ?></p>
 
-                    <form action="" class="mt-25">
+                    <form method="post" class="mt-25">
 
                         <div class="form-group">
-                            <label for="">Komentar</label>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <label for="komentar">Komentar</label>
+                            <textarea name="komentar" id="" cols="30" rows="10" placeholder="Masukkan komentar..."></textarea>
                         </div>
 
-                        <button>Kirim</button>
+                        <button type="submit" name="kirim">Kirim</button>
                     </form>
 
 
 
                     <div class="komentar pt-50">
+                        <?php foreach ($dataKomentar as $key => $value): ?>
+                            
                         <div class="perKomentar">
                             <div class="orang">
-                                <img src="img/people/orang1.svg" alt="orang">
+                                <img src="fotoUser/<?php echo $value['foto_user'] ?>" alt="orang">
                                 <div class="caption">
-                                    <h3>Rifkimak anjay</h3>
-                                    <p>Diposting pada 12-11-04</p>
+                                    <h3><?php echo $value['nama_user'] ?></h3>
+                                    <p>Diposting pada <?php echo $value['tanggal_posting'] ?></p>
                                 </div>
                             </div>
 
-                            <p class="isiKomentar">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cupiditate nihil ipsam
-                                consectetur explicabo quam, illum sunt tenetur fugit in harum corrupti a dolores velit
-                                nulla commodi quidem ducimus distinctio.
-                            </p>
+                            <p class="isiKomentar"><?php echo $value['isi_komentar'] ?></p>
                         </div>
-
-
-                        <div class="perKomentar">
-                            <div class="orang">
-                                <img src="img/people/orang1.svg" alt="orang">
-                                <div class="caption">
-                                    <h3>Rifkimak anjay</h3>
-                                    <p>Diposting pada 12-11-04</p>
-                                </div>
-                            </div>
-
-                            <p class="isiKomentar">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cupiditate nihil ipsam
-                                consectetur explicabo quam, illum sunt tenetur fugit in harum corrupti a dolores velit
-                                nulla commodi quidem ducimus distinctio.
-                            </p>
-                        </div>
-
+                        <?php endforeach ?>
 
                     </div>
 
@@ -213,27 +193,48 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <?php require "layout/footer.php" ?>
 
 
 
 
     <script src="js/script.js"></script>
-    <script src="fontawesome/js/all.min.js"></script>
+
+
 </body>
 
 </html>
+<?php
+
+
+if (isset($_POST['kirim'])) {
+    if (isset($_SESSION['pelanggan'])) {
+        $komentar = htmlspecialchars($_POST['komentar']);
+        $namaPelanggan = $_SESSION['pelanggan']['nama_user'];
+
+        if (empty($komentar)) {
+            echo"<script>
+                alert('Isi semua formulir')
+                location = 'detailDestinasi.php?id=$id'
+            </script>";
+        }
+
+
+        $conn->query("INSERT INTO komentar VALUES(null,'$id', '$namaPelanggan', null, '$komentar')");
+
+        echo"<script>
+            alert('Komentar Berhasil Dikirim')
+            location = 'detailDestinasi.php?id=$id'
+        </script>";
+
+    }else{
+        echo"<script>
+            alert('Anda harus login')
+            location = 'masuk.php'
+        </script>";
+    }
+}
+
+
+
+?>

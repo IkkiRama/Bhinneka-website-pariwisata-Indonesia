@@ -2,24 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="">
-    <meta name="description" content="anjay">
+    <?php require "layout/header.php" ?>
     <title>Destinasi | Bhinneka</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <script src="fontawesome/js/all.min.js"></script>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon.png">
 </head>
 
 <body>
+   <?php
 
+        $data = [];
+        $ambil = $conn->query("SELECT * FROM provinsi");
+        while($pecah = $ambil->fetch_assoc()){
+            $data[] = $pecah;
+        }
+
+
+    ?>
    
     <?php require "layout/navbar.php" ?>
 
@@ -55,42 +52,19 @@
     <section class="kelasHome pb-100">
         <div class="container">
 
-            <div class="kelas">
+            <div class="kelas flex-wrap">
+
+                <?php foreach ($data as $key => $value): ?>
                 <div class="perKelas">
-                    <img src="img/kelas/Skilvul asset volume 2-03.jpg" alt="html">
-                    <h3>HTML Dasar</h3>
-                    <p class="deskripsiSingkat">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas qui
-                        cumque et illo aspernatur
-                        dolor similique reiciendis voluptatum repudiandae nesciunt!</p>
+                    <img src="fotoProvinsi/<?php echo $value['foto_provinsi'] ?>" alt="html">
+                    <h3><?php echo $value['nama_provinsi'] ?></h3>
+                    <p class="deskripsiSingkat"><?php echo $value['deskripsi_singkat_provinsi'] ?></p>
 
                     <div class="btn">
-                        <a href="detailDestinasi.html" class="selengkapnya">Selengkapnya</a>
+                        <a href="detailDestinasi.php?id=<?php echo $value['id_provinsi'] ?>" class="selengkapnya">Selengkapnya</a>
                     </div>
                 </div>
-
-                <div class="perKelas">
-                    <img src="img/kelas/Skilvul asset volume 2-04.jpg" alt="css">
-                    <h3>CSS Dasar</h3>
-                    <p class="deskripsiSingkat">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas qui
-                        cumque et illo aspernatur
-                        dolor similique reiciendis voluptatum repudiandae nesciunt!</p>
-
-                    <div class="btn">
-                        <a href="detailDestinasi.html" class="selengkapnya">Selengkapnya</a>
-                    </div>
-                </div>
-
-                <div class="perKelas">
-                    <img src="img/kelas/Skilvul asset volume 2-02.jpg" alt="js">
-                    <h3>JavaScript Dasar</h3>
-                    <p class="deskripsiSingkat">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas qui
-                        cumque et illo aspernatur
-                        dolor similique reiciendis voluptatum repudiandae nesciunt!</p>
-
-                    <div class="btn">
-                        <a href="detailDestinasi.html" class="selengkapnya">Selengkapnya</a>
-                    </div>
-                </div>
+                <?php endforeach ?>
 
             </div>
 

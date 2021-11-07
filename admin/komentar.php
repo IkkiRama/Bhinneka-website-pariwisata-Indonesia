@@ -9,10 +9,11 @@ if (empty($_SESSION['admin'])) {
 }
 
 $data = [];
-$ambil = $conn->query("SELECT * FROM provinsi");
+$ambil = $conn->query("SELECT * FROM komentar LEFT JOIN provinsi ON komentar.id_provinsi = provinsi.id_provinsi ");
 while($pecah = $ambil->fetch_assoc()){
 	$data[] = $pecah;
 }
+
 
 
 
@@ -23,34 +24,35 @@ while($pecah = $ambil->fetch_assoc()){
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bhinneka | Provinsi admin</title>
+	<title>Bhinneka | Penginapan admin</title>
 </head>
 <body>
-	<h1>Provinsi Bhinneka</h1>
-	<?php require "layout/navbar.php" ?>
+	<!-- <pre>
+		<?php
+			//var_dump($data);
+		?>
+	</pre> -->
 
-	<br><br>
-	<a href="tambahProvinsi.php">Tambah Provinsi</a>
-	<br><br>
+	<h1>Penginapan Bhinneka</h1>
+	<?php require "layout/navbar.php" ?>
 
 
 	<table border="1" cellpadding="10" cellspacing="0">
 		<tr>
 			<th>No</th>
-			<th>Foto</th>
-			<th>Nama</th>
-			<th>Aksi</th>
+			<th>Nama Provinsi</th>
+			<th>Nama User</th>
+			<th>Tanggal</th>
+			<th>Komentar</th>
 		</tr>
 
 		<?php foreach ($data as $key => $value): ?>
 		<tr>
 			<td><?php echo $key+1 ?></td>
-			<td><img src="../fotoProvinsi/<?php echo $value['foto_provinsi'] ?>" width="100" height="100"></td>
 			<td><?php echo $value['nama_provinsi'] ?></td>
-			<td>
-				<a href="ubahProvinsi.php?id=<?php echo $value['id_provinsi'] ?>">Ubah</a> |
-				<a href="hapusProvinsi.php?id=<?php echo $value['id_provinsi'] ?>" onclick="return confirm('Yakin?')">Hapus</a>
-			</td>
+			<td><?php echo $value['nama_user'] ?></td>
+			<td><?php echo $value['tanggal_posting'] ?></td>
+			<td><?php echo $value['isi_komentar'] ?></td>
 		</tr>
 		<?php endforeach ?>
 	</table>

@@ -2,19 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="">
-    <meta name="description" content="anjay">
+    <?php require "layout/header.php" ?>
     <title>Hubungi Kami | CodePee</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon.png">
 </head>
 
 <body>
@@ -30,21 +19,16 @@
             <div class="caption">
                 <h1>Kontak Kami</h1>
 
-                <form action="">
-
-                    <!-- <div class="form-group">
-                        <label for="nama">Nama Lengkap</label>
-                        <input type="text" id="nama">
-                    </div> -->
+                <form method="post">
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Masukkan email anda...">
+                        <input type="email" id="email" name="email" placeholder="Masukkan email anda...">
                     </div>
 
                     <div class="form-group">
                         <label for="judul">Judul</label>
-                        <input type="text" id="judul" placeholder="Masukkan judul...">
+                        <input type="text" id="judul" name="judul" placeholder="Masukkan judul...">
                     </div>
 
                     <div class="form-group">
@@ -53,7 +37,7 @@
                             placeholder="Masukkan pesan anda..."></textarea>
                     </div>
 
-                    <button type="submit">Kirim</button>
+                    <button type="submit" name="kirim">Kirim</button>
 
                 </form>
             </div>
@@ -82,3 +66,33 @@
 </body>
 
 </html>
+
+<?php
+if (isset($_POST['kirim'])) {
+
+    $email = htmlspecialchars($_POST['email']);
+    $judul = htmlspecialchars($_POST['judul']);
+    $pesan = htmlspecialchars($_POST['pesan']);
+
+    if (empty($email)|| empty($judul)|| empty($pesan)) {
+        echo"<script>
+            alert('harap isi semua formulir')
+            location = 'kontak.php'
+        </script>";
+    }
+
+
+
+    $conn->query("INSERT INTO kontak VALUES(null, '$email', '$judul', '$pesan')");
+
+
+    echo"<script>
+            alert('Data berhasil dikirim')
+            location = 'kontak.php'
+        </script>";
+
+
+}
+
+
+?>

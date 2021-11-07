@@ -2,112 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="">
-    <meta name="description" content="anjay">
-    <title>Cara Membuat Auth menggunakan laravel | Bhinneka</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <script src="fontawesome/js/all.min.js"></script>
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon.png">
+    <?php require "layout/header.php" ?>
+    <?php
+
+    $id = $_GET['id'];
+    $ambil = $conn->query("SELECT * FROM artikel WHERE id_artikel = '$id' ");
+    $pecah = $ambil->fetch_assoc();
+
+
+
+    ?>
+    <title><?php echo $pecah['title_artikel'] ?> | Bhinneka</title>
 </head>
 
 <body>
 
 
-    <?php require "layout/navbar.php" ?>
-
-
-
-    
+    <?php require "layout/navbar.php" ?>    
     <section class="contentArtikel">
         <div class="container">
 
-            <h1 class="titleArtikel" id="one">Cara Membuat Auth Login Dengan Laravel</h1>
+            <h1 class="titleArtikel" id="one"><?php echo $pecah['title_artikel'] ?></h1>
 
-            <p class="writer">Ditulis oleh : <span>Rifki R</span> pada 12 November 2098 </p>
+            <p class="writer">Ditulis oleh : <span><?php echo $pecah['nama_penulis'] ?></span> pada <?php echo $pecah['tanggal_posting_artikel'] ?> </p>
 
-            <img src="img/provinsi/provinsi.jpg" alt="img Artikel" class="thumbnail">
+            <img src="fotoArtikel/<?php echo $pecah['foto_artikel'] ?>" alt="img Artikel" class="thumbnail">
 
-            <p>Untuk membuat laravel blog, inilah beberapa langkah yang perlu Anda lakukan:</p>
+            <?php echo htmlspecialchars_decode($pecah['konten']) ?>
 
-            <h3>1. Melakukan Instalasi Laravel</h3>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aperiam animi eveniet repudiandae
-                hic maiores eaque odit, quia tempora facilis. Minus excepturi quibusdam sit voluptatem eos,
-                voluptatum at neque libero nesciunt atque sapiente ipsum optio porro tempora aliquid suscipit
-                distinctio amet perferendis dolores laboriosam assumenda quisquam delectus et veniam. Tempora rerum,
-                officia deserunt delectus illo inventore, adipisci ab enim optio, amet blanditiis similique maiores
-                nam ullam sequi fuga cumque veniam minima nostrum fugiat voluptate saepe fugit? Et vel corporis
-                excepturi cumque? Eaque repellendus fugiat facilis, iste deserunt sapiente voluptatibus aspernatur
-                suscipit nulla laudantium quo perferendis ex molestiae maiores quas. Provident necessitatibus
-                veniam, est quam ipsum officia sit adipisci tempora excepturi sunt velit totam minus quod
-                praesentium. Voluptate corporis, porro culpa possimus esse numquam dolores, recusand
-            </p>
-
-            <h3>2. Melakukan Konfigurasi Database</h3>
-
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aperiam animi eveniet repudiandae
-                hic maiores eaque odit, quia tempora facilis. Minus excepturi quibusdam sit voluptatem eos,
-                voluptatum at neque libero nesciunt atque sapiente ipsum optio porro tempora aliquid suscipit
-                distinctio amet perferendis dolores laboriosam assumenda quisquam delectus et veniam. Tempora rerum,
-                officia deserunt delectus illo inventore, adipisci ab enim optio, amet blanditiis similique maiores
-                nam ullam sequi fuga cumque veniam minima nostrum fugiat voluptate saepe fugit? Et vel corporis
-                excepturi cumque? Eaque repellendus fugiat facilis, iste deserunt sapiente voluptatibus aspernatur
-                suscipit nulla laudantium quo perferendis ex molestiae maiores quas. Provident necessitatibus
-                veniam, est quam ipsum officia sit adipisci tempora excepturi sunt velit totam minus quod
-                praesentium. Voluptate corporis, porro culpa possimus esse numquam dolores, recusand
-            </p>
-
-            <h3>3. Menghubungkan Laravel dengan Bootstrap</h3>
-
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aperiam animi eveniet repudiandae
-                hic maiores eaque odit, quia tempora facilis. Minus excepturi quibusdam sit voluptatem eos,
-                voluptatum at neque libero nesciunt atque sapiente ipsum optio porro tempora aliquid suscipit
-                distinctio amet perferendis dolores laboriosam assumenda quisquam delectus et veniam. Tempora rerum,
-                officia deserunt delectus illo inventore, adipisci ab enim optio, amet blanditiis similique maiores
-                nam ullam sequi fuga cumque veniam minima nostrum fugiat voluptate saepe fugit? Et vel corporis
-                excepturi cumque? Eaque repellendus fugiat facilis, iste deserunt sapiente voluptatibus aspernatur
-                suscipit nulla laudantium quo perferendis ex molestiae maiores quas. Provident necessitatibus
-                veniam, est quam ipsum officia sit adipisci tempora excepturi sunt velit totam minus quod
-                praesentium. Voluptate corporis, porro culpa possimus esse numquam dolores, recusand
-            </p>
-
-            <h3>4. Membuat Tabel Artikel</h3>
-
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aperiam animi eveniet repudiandae
-                hic maiores eaque odit, quia tempora facilis. Minus excepturi quibusdam sit voluptatem eos,
-                voluptatum at neque libero nesciunt atque sapiente ipsum optio porro tempora aliquid suscipit
-                distinctio amet perferendis dolores laboriosam assumenda quisquam delectus et veniam. Tempora rerum,
-                officia deserunt delectus illo inventore, adipisci ab enim optio, amet blanditiis similique maiores
-                nam ullam sequi fuga cumque veniam minima nostrum fugiat voluptate saepe fugit? Et vel corporis
-                excepturi cumque? Eaque repellendus fugiat facilis, iste deserunt sapiente voluptatibus aspernatur
-                suscipit nulla laudantium quo perferendis ex molestiae maiores quas. Provident necessitatibus
-                veniam, est quam ipsum officia sit adipisci tempora excepturi sunt velit totam minus quod
-                praesentium. Voluptate corporis, porro culpa possimus esse numquam dolores, recusand
-            </p>
-
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis aperiam animi eveniet repudiandae
-                hic maiores eaque odit, quia tempora facilis. Minus excepturi quibusdam sit voluptatem eos,
-                voluptatum at neque libero nesciunt atque sapiente ipsum optio porro tempora aliquid suscipit
-                distinctio amet perferendis dolores laboriosam assumenda quisquam delectus et veniam. Tempora rerum,
-                officia deserunt delectus illo inventore, adipisci ab enim optio, amet blanditiis similique maiores
-                nam ullam sequi fuga cumque veniam minima nostrum fugiat voluptate saepe fugit? Et vel corporis
-                excepturi cumque? Eaque repellendus fugiat facilis, iste deserunt sapiente voluptatibus aspernatur
-                suscipit nulla laudantium quo perferendis ex molestiae maiores quas. Provident necessitatibus
-                veniam, est quam ipsum officia sit adipisci tempora excepturi sunt velit totam minus quod
-                praesentium. Voluptate corporis, porro culpa possimus esse numquam dolores, recusand
-            </p>
         </div>
 
     </section>

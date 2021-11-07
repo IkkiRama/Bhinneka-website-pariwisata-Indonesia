@@ -9,7 +9,7 @@ if (empty($_SESSION['admin'])) {
 }
 
 $data = [];
-$ambil = $conn->query("SELECT * FROM provinsi");
+$ambil = $conn->query("SELECT * FROM penginapan");
 while($pecah = $ambil->fetch_assoc()){
 	$data[] = $pecah;
 }
@@ -23,21 +23,20 @@ while($pecah = $ambil->fetch_assoc()){
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bhinneka | Provinsi admin</title>
+	<title>Bhinneka | Penginapan admin</title>
 </head>
 <body>
-	<h1>Provinsi Bhinneka</h1>
+	<h1>Penginapan Bhinneka</h1>
 	<?php require "layout/navbar.php" ?>
 
 	<br><br>
-	<a href="tambahProvinsi.php">Tambah Provinsi</a>
+	<a href="tambahPenginapan.php">Tambah Penginapan</a>
 	<br><br>
 
 
 	<table border="1" cellpadding="10" cellspacing="0">
 		<tr>
 			<th>No</th>
-			<th>Foto</th>
 			<th>Nama</th>
 			<th>Aksi</th>
 		</tr>
@@ -45,11 +44,10 @@ while($pecah = $ambil->fetch_assoc()){
 		<?php foreach ($data as $key => $value): ?>
 		<tr>
 			<td><?php echo $key+1 ?></td>
-			<td><img src="../fotoProvinsi/<?php echo $value['foto_provinsi'] ?>" width="100" height="100"></td>
-			<td><?php echo $value['nama_provinsi'] ?></td>
+			<td><?php echo $value['nama_penginapan'] ?></td>
 			<td>
-				<a href="ubahProvinsi.php?id=<?php echo $value['id_provinsi'] ?>">Ubah</a> |
-				<a href="hapusProvinsi.php?id=<?php echo $value['id_provinsi'] ?>" onclick="return confirm('Yakin?')">Hapus</a>
+				<a href="ubahPenginapan.php?id=<?php echo $value['id_penginapan'] ?>">Ubah</a> |
+				<a href="hapusPenginapan.php?id=<?php echo $value['id_penginapan'] ?>" onclick="return confirm('Yakin?')">Hapus</a>
 			</td>
 		</tr>
 		<?php endforeach ?>

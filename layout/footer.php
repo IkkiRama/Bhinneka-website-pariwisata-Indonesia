@@ -44,20 +44,20 @@
 
             <div class="box">
                 <h2>Provinsi</h2>
-                <a href="index.html">Bali</a>
-                <a href="index.html">Jakarta</a>
-                <a href="index.html">Jawa Barat</a>
-                <a href="index.html">Jawa Tengah</a>
-                <a href="index.html">Sumatra Utara</a>
-                <a href="index.html">Kalimantan Selatan</a>
+                <a href="destinasi.php">Bali</a>
+                <a href="destinasi.php">Jakarta</a>
+                <a href="destinasi.php">Jawa Barat</a>
+                <a href="destinasi.php">Jawa Tengah</a>
+                <a href="destinasi.php">Sumatra Utara</a>
+                <a href="destinasi.php">Kalimantan Selatan</a>
             </div>
 
 
             <div class="box">
                 <h2>Quick Link</h2>
-                <a href="artikel.html">Artikel</a>
-                <a href="kontak.html">Kontak</a>
-                <a href="destinasi.html">Destinasi</a>
+                <a href="artikel.php">Artikel</a>
+                <a href="kontak.php">Kontak</a>
+                <a href="destinasi.php">Destinasi</a>
             </div>
 
         </div>

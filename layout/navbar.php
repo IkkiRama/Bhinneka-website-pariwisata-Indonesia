@@ -51,9 +51,14 @@
             <li><a href="artikel.php">Artikel</a></li>
             <li><a href="kontak.php">Kontak</a></li>
 
+
+            <?php if (isset($_SESSION['pelanggan'])){ ?>
+                <li><a href="logout.php">Logout</a></li>
+            <?php }else{ ?>
             <div class="auth">
                 <a href="">Masuk</a>
                 <a href="">Daftar</a>
             </div>
+            <?php } ?>
         </ul>
     </nav>
