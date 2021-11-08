@@ -49,6 +49,7 @@
 
 
             <?php foreach ($data as $key => $value) { ?>
+                <?php if ($key+1 <= 3){ ?>
             <a href="perArtikel.php?id=<?php echo $value['id_artikel'] ?>" class="perArtikel">
                 <img src="fotoArtikel/<?php echo $value['foto_artikel'] ?>" alt="perArtikel img">
                 <h2><?php echo $value['title_artikel'] ?></h2>
@@ -58,6 +59,9 @@
                     <button>Baca Selengkapnya</button>
                 </div>
             </a>
+                <?php }else{ ?>
+                    <div></div>
+                <?php } ?>
             <?php } ?>
 
 

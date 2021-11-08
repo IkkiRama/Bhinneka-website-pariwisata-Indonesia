@@ -22,6 +22,7 @@
     $dataPenginapan = [];
     $dataTempatMakan = [];
     $dataKomentar = [];
+    $dataDestinasi = [];
     
 
     $ambilPenginapan = $conn->query("SELECT * FROM penginapan WHERE id_provinsi = '$id' ");
@@ -40,6 +41,19 @@
     while($pecahKomentar = $ambilKomentar->fetch_assoc()){
         $dataKomentar[] = $pecahKomentar;
     }
+
+
+    $ambilDestinasi = $conn->query("SELECT * FROM destinasi WHERE id_destinasi = '$id' ");
+    while($pecahDestinasi = $ambilDestinasi->fetch_assoc()){
+        $dataDestinasi[] = $pecahDestinasi;
+    }
+    $hitungDestinasi = $ambilDestinasi->num_rows;
+    $hitungTempatMakan = $ambilTempatMakan->num_rows;
+    $hitungPenginapan = $ambilPenginapan->num_rows;
+
+
+
+
 
     ?>
 
@@ -79,12 +93,9 @@
                     <h2>Daftar Destinasi</h2>
 
                     <div class="materi">
-                        <p>kontol</p>
-                        <p>kontol</p>
-                        <p>kontol</p>
-                        <p>kontol</p>
-                        <p>kontol</p>
-                        <p>kontol</p>
+                        <?php foreach ($dataDestinasi as $key => $value): ?>
+                        <p><?php echo $value['nama_destinasi'] ?></p>
+                        <?php endforeach ?>
                     </div>
                 </div>
 
@@ -162,36 +173,33 @@
 
             <div class="infoKelas">
                 <div class="perInfoKelas">
-                    <h2>Detail Kelas</h2>
+                    <h2>Detail Provinsi</h2>
 
                     <div class="infoMateri">
                         <div class="icon">
                             <i class="fas fa-clipboard"></i>
                         </div>
-                        <p>8 Destinasi</p>
+                        <p><?php echo $hitungDestinasi ?> Destinasi</p>
                     </div>
 
                     <div class="infoMateri">
                         <div class="icon">
                             <i class="fas fa-hotel"></i>
                         </div>
-                        <p>8 Penginapan</p>
+                        <p><?php echo $hitungPenginapan ?> Penginapan</p>
                     </div>
 
                     <div class="infoMateri">
                         <div class="icon">
                             <i class="fas fa-utensils"></i>
                         </div>
-                        <p>8 Tempat Makan</p>
+                        <p><?php echo $hitungTempatMakan ?> Tempat Makan</p>
                     </div>
 
                 </div>
             </div>
         </div>
     </section>
-
-
-
 
     <?php require "layout/footer.php" ?>
 

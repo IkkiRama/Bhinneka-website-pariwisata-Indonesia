@@ -1,6 +1,7 @@
 <ul>
 	<li><a href="index.php">Home</a></li>
 	<li><a href="provinsi.php">Provinsi</a></li>
+	<li><a href="destinasi.php">Destinasi</a></li>
 	<li><a href="penginapan.php">Penginapan</a></li>
 	<li><a href="tempatMakan.php">Tempat Makan</a></li>
 	<li><a href="artikel.php">Artikel</a></li>
